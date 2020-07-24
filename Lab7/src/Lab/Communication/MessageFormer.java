@@ -4,19 +4,27 @@ import Lab.Commands.Meta;
 import Lab.Service.Answer;
 
 import java.io.*;
+import java.net.SocketAddress;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 public class MessageFormer {
     final String ENDER = "_MESSAGE_END_";
     boolean hasEnded;
     String message;
+    SocketAddress sender;
     byte[] arr=new byte[0];
-    MessageFormer(){
+    MessageFormer(SocketAddress sender){
+        this.sender=sender;
         hasEnded=false;
         message="";
     }
+    private MessageFormer(){
+        hasEnded=false;
+    }
+    static MessageFormer EmptyMessage = new MessageFormer();
     void formFromByte(byte[] list){
-        String es = new String(list);
+        String es = new String(list, StandardCharsets.UTF_8);
         if(es.contains(ENDER)){
             hasEnded=true;
         }

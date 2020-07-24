@@ -2,6 +2,7 @@ package Lab.Commands;
 
 import Lab.Objects.MusicBand;
 import Lab.Service.Answer;
+import Lab.Service.Database;
 import Lab.Service.Work;
 
 public class SumOfNumberOfParticipants extends Command {
@@ -16,7 +17,7 @@ public class SumOfNumberOfParticipants extends Command {
 
     @Override
     public Answer act(Meta meta, Work work) {
-        Long a = (long) work.getV().stream().mapToInt((MusicBand::getTrueNumberOfParticipants)).sum();
+        Long a = (long) Database.GetCollection().stream().mapToInt((MusicBand::getTrueNumberOfParticipants)).sum();
         return new Answer(a.toString(),true,exit);
     }
 }

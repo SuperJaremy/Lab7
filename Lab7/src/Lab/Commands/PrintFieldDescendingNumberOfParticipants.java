@@ -2,6 +2,7 @@ package Lab.Commands;
 
 import Lab.Objects.MusicBand;
 import Lab.Service.Answer;
+import Lab.Service.Database;
 import Lab.Service.Work;
 
 import java.util.Comparator;
@@ -19,7 +20,7 @@ public class PrintFieldDescendingNumberOfParticipants extends Command {
 
     @Override
     public Answer act(Meta meta, Work work) {
-        String answer = work.getV().stream().
+        String answer = Database.GetCollection().stream().
                 filter(musicBand -> musicBand.getNumberOfParticipants()!=null).
                 map(MusicBand::getTrueNumberOfParticipants).distinct().
                 sorted((i1,i2)->-i1.compareTo(i2)).

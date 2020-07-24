@@ -14,11 +14,11 @@ public class Album implements Serializable {
     private String name;
     private long length;
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    long getLength() {
+    public long getLength() {
         return length;
     }
 

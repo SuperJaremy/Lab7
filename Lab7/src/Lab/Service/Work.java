@@ -8,14 +8,17 @@ import java.util.*;
 
 public class Work {
     private static final  Map<String, Command> Commands = new HashMap<>();
-    Vector<MusicBand>V;
     private final Queue<Command> History = new LinkedList<>();
-    private Date changeDate;
     public static Map<String,Command> getCommands(){
         return Commands;
     }
     static Answer falseAnswer= new Answer("Такой команды не существует",
             false,false);
+    private String username;
+    public Work(String username){
+        this.username=username;
+    }
+    public Work(){}
     static {
         Command info = new Info();
         Command help = new Help();
@@ -32,6 +35,7 @@ public class Work {
                 new PrintFieldDescendingNumberOfParticipants();
         Command uid=new Update();
         Command remove_id = new RemoveByID();
+        Command script = new ExecuteScript();
         Commands.put(info.getName(), info);
         Commands.put(help.getName(), help);
         Commands.put(show.getName(),show);
@@ -47,6 +51,7 @@ public class Work {
         printFieldDescendingNumberOfParticipants);
         Commands.put(uid.getName(),uid);
         Commands.put(remove_id.getName(),remove_id);
+        Commands.put(script.getName(),script);
     }
     public Answer execute(Meta meta) {
         Answer answer;
@@ -71,12 +76,8 @@ public class Work {
         return History;
     }
 
-    public Vector<MusicBand> getV() {
-        return V;
+    public String getUsername(){
+        return username;
     }
 
-
-    public Date getChangeDate() {
-        return changeDate;
-    }
 }

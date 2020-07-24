@@ -2,6 +2,7 @@ package Lab.Commands;
 
 import Lab.Objects.MusicBand;
 import Lab.Service.Answer;
+import Lab.Service.Database;
 import Lab.Service.Work;
 
 public class CountByNumberOfParticipants extends Command {
@@ -18,7 +19,7 @@ public class CountByNumberOfParticipants extends Command {
     @Override
     public Answer act(Meta meta, Work work) {
         Integer num = meta.getElement().getNum();
-        Long count = work.getV().stream().filter((MusicBand mb)->{
+        Long count = Database.GetCollection().stream().filter((MusicBand mb)->{
             Integer participants=mb.getNumberOfParticipants();
             if(participants!=null)
                 return num.equals(participants);

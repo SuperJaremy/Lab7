@@ -1,6 +1,7 @@
 package Lab.Commands;
 
 import Lab.Service.Answer;
+import Lab.Service.Database;
 import Lab.Service.Work;
 
 import java.text.SimpleDateFormat;
@@ -19,12 +20,8 @@ public class Info extends Command {
 
     @Override
     public Answer act(Meta meta, Work work) {
-        String answer = "Тип коллекции: ".concat(work.getV().getClass().toString()).
-                concat("\n").concat("Время инициализации: ").
-                concat("Время последнего изменения: ").
-                concat(sdf.format(work.getChangeDate())).concat("\n").
-                concat("Размер коллекции: ").
-                concat(Integer.valueOf(work.getV().size()).toString());
+        String answer = "Размер коллекции: ".
+                concat(Integer.valueOf(Database.GetCollection().size()).toString());
         return new Answer(answer,true,exit);
     }
 }

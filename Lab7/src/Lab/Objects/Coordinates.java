@@ -9,8 +9,11 @@ public class Coordinates implements Serializable {
     private final static long serialVersionUID=436274532780L;
     private Float x;
     private long y;
-    Float getX(){
+    public Float getX(){
         return x;
+    }
+    public long getY(){
+        return y;
     }
 
     private Coordinates(Float x, long y){

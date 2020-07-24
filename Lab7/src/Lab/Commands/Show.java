@@ -2,6 +2,7 @@ package Lab.Commands;
 
 import Lab.Objects.MusicBand;
 import Lab.Service.Answer;
+import Lab.Service.Database;
 import Lab.Service.Work;
 
 import java.util.Comparator;
@@ -19,7 +20,7 @@ public class Show  extends Command{
 
     @Override
     public Answer act(Meta meta, Work work) {
-        String info= work.getV().stream().sorted(Comparator.comparing(MusicBand::getSize)).
+        String info= Database.GetCollection().stream().sorted(Comparator.comparing(MusicBand::getSize)).
                 map(MusicBand::toString).map(mb->mb.concat("\n")).
                 collect(Collectors.joining()).concat("Конец списка");
         return new Answer(info,true,exit);

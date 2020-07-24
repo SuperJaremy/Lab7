@@ -16,7 +16,6 @@ public class FileTester {
     static boolean TestFileToExist(Path path){
         File file=path.toFile();
         if(!file.exists()){
-            logger.error("Файл не существует");
             return false;
         }
         else return true;

@@ -18,7 +18,7 @@ public class MusicBand implements Comparable<MusicBand>, Serializable {
     private Integer id;
     private String name;
     private Coordinates coordinates;
-    private java.time.LocalDate creationDate;
+    private final java.time.LocalDate creationDate;
     private Integer numberOfParticipants;
     private long albumsCount;
     private java.util.Date establishmentDate;
@@ -29,7 +29,6 @@ public class MusicBand implements Comparable<MusicBand>, Serializable {
         sdf.setLenient(false);
     }
     public static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-    static private final Set<Integer> ids = new HashSet<>();
     private Integer size;
     public MusicBand() {
         coordinates=new Coordinates();
@@ -42,18 +41,12 @@ public class MusicBand implements Comparable<MusicBand>, Serializable {
                      java.util.Date establishmentDate, MusicGenre genre, Album bestAlbum)
     {
         if(id!=null) {
-            boolean uniqueId = !ids.contains(id);
             if (id > 0) {
-                if(uniqueId)
-                    this.id=id;
-                else {
-                    logger.error("id " + id + "повторяется");
-                    throw new NullPointerException();
-                }
+                this.id=id;
             }
             else {
                 logger.error("id объектов должен быть" +
-                        " положительным целым числом." + id+" им не является");
+                        " положительным целым числом. " + id+" им не является");
                 throw new NullPointerException();
             }
         }
@@ -135,7 +128,6 @@ public class MusicBand implements Comparable<MusicBand>, Serializable {
        size=name.length();
        if(this.bestAlbum!=null)
            size+=bestAlbum.getName().length();
-       ids.add(id);
     }
     public Integer getNumberOfParticipants(){
         return numberOfParticipants;
@@ -226,21 +218,15 @@ public class MusicBand implements Comparable<MusicBand>, Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, coordinates, creationDate, numberOfParticipants, albumsCount, establishmentDate, genre, bestAlbum);
+        return Objects.hash(id, name, coordinates, creationDate,
+                numberOfParticipants, albumsCount, establishmentDate, genre, bestAlbum);
     }
-    public static MusicBand create(MusicBand mb) throws Exception{
-        Integer i= 1;
-        while(i>0){
-            if(!ids.contains(i)){
-                MusicBand musicBand= new MusicBand(i,mb.name, mb.coordinates, LocalDate.now(), mb.numberOfParticipants,
-                        mb.albumsCount,mb.establishmentDate,mb.genre,mb.bestAlbum);
-                musicBand.size=musicBand.name.length()+(musicBand.bestAlbum!=null?
-                        musicBand.bestAlbum.getName().length():0);
-                return musicBand;
-            }
-            i++;
-        }
-        throw new Exception();
+    public static MusicBand create(MusicBand mb){
+        MusicBand musicBand= new MusicBand(1,mb.name, mb.coordinates, LocalDate.now(),
+                mb.numberOfParticipants, mb.albumsCount,mb.establishmentDate,mb.genre,mb.bestAlbum);
+        musicBand.size=musicBand.name.length()+(musicBand.bestAlbum!=null?
+                musicBand.bestAlbum.getName().length():0);
+        return musicBand;
     }
     public void update(MusicBand mb){
         name=mb.name;
@@ -251,16 +237,6 @@ public class MusicBand implements Comparable<MusicBand>, Serializable {
         genre=mb.genre;
         bestAlbum=mb.bestAlbum;
     }
-    public static boolean idExists(Integer id){
-        return ids.contains(id);
-    }
-    public static boolean removeId(Integer id){
-        if(idExists(id)) {
-            ids.remove(id);
-            return true;
-        }
-        return false;
-    }
 
     public Integer getSize() {
         return size;
@@ -268,5 +244,9 @@ public class MusicBand implements Comparable<MusicBand>, Serializable {
 
     public Integer getTrueNumberOfParticipants(){
         return numberOfParticipants!=null?numberOfParticipants:0;
+    }
+
+    public void setId(int id){
+        this.id=id;
     }
 }
