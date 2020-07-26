@@ -7,14 +7,13 @@ import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 import java.util.Arrays;
 
-public class MessageSender {
+class MessageSender {
     byte[] arr;
     DatagramChannel dc;
     MessageSender(DatagramChannel dc){
         this.dc=dc;
     }
     void sendMessage(MessageFormer mf, SocketAddress targetAddress) throws IOException{
-        InetSocketAddress localAddress = new InetSocketAddress("localhost",8888);
         arr=mf.arr;
         byte[] buf = new byte[100];
             while(arr.length>0){

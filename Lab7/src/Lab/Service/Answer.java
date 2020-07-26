@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Answer implements Serializable {
     private static final long serialVersionUID = 463274289482L;
+    transient String username;
     private String answer;
     private boolean success;
     private boolean exit;

@@ -7,12 +7,17 @@ import org.apache.logging.log4j.Logger;
 import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
+import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Authorizator {
     private final static Logger logger = LogManager.getLogger();
     private static final File file = new File("users.cfg");
     private static boolean isCreated;
+    private final static Map<String,String> users  = new ConcurrentHashMap<>();
+    private final static String pepper = "$&5?6%5.7#^Gf!)^";
 
     private static class AuthorizatorHolder{
         static final Authorizator a = new Authorizator();
@@ -31,6 +36,26 @@ public class Authorizator {
                 file.setReadable(true, true);
         if(!isCreated)
             logger.error("Невозможно установить нужные права для системного файла users");
+        try(BufferedReader reader = new BufferedReader(new FileReader(file))){
+            String line = reader.readLine();
+            while(line!=null){
+                String[] parameters = line.split(":");
+                if(parameters.length==3) {
+                    String user = parameters[0];
+                    String password = String.join(":",parameters[1],parameters[2]);
+                    users.put(user,password);
+                    line=reader.readLine();
+                }
+                else {
+                    logger.error("Неверный формат файла конфигурации\n");
+                    isCreated=false;
+                    throw new IOException();
+                }
+            }
+        }
+        catch (IOException e){
+            logger.error("Ошибка при работе с файлом конфигруации");
+        }
     }
     public static boolean create(){
         return AuthorizatorHolder.a.isCreated;
@@ -43,22 +68,13 @@ public class Authorizator {
             throw new IOException("Нужный файл не существует");
         MessageDigest crypt = MessageDigest.getInstance("SHA-1");
         String username = meta.getUsername();
-        String pepper = "$&5?6%5.7#^Gf!)^";
-        try(BufferedReader reader = new BufferedReader(new FileReader(file))){
-            String line = reader.readLine();
-            while(line!=null){
-                String[] parameters = line.split(":");
-                if(parameters.length==3&&parameters[0].equals(username)){
-                    String salt = parameters[1];
-                    String password = pepper.concat(meta.getPassword()).concat(salt);
-                    byte[] bytes =  crypt.digest(password.getBytes());
-                    crypt.reset();
-                    if(Helper.getHexString(bytes).equals(parameters[2]))
-                        return true;
-                    return false;
-                }
-                line=reader.readLine();
-            }
+        if(users.containsKey(username)){
+            String[] parameters = users.get(username).split(":");
+            String salt = parameters[0];
+            String password = pepper.concat(meta.getPassword()).concat(salt);
+            byte[] bytes =  crypt.digest(password.getBytes());
+            crypt.reset();
+            return Helper.getHexString(bytes).equals(parameters[1]);
         }
         try(PrintWriter writer =new PrintWriter( new BufferedWriter(new FileWriter(file,true)))){
             Random random = new Random();
@@ -76,9 +92,10 @@ public class Authorizator {
                     getBytes();
             bytes= crypt.digest(bytes);
             crypt.reset();
-            String line = Helper.getHexString(bytes);
-            line = meta.getUsername().concat(":").concat(salt).concat(":").concat(line);
+            String password = Helper.getHexString(bytes);
+            String line = meta.getUsername().concat(":").concat(salt).concat(":").concat(password);
             writer.println(line);
+            users.put(meta.getUsername(),salt.concat(":").concat(password));
             return true;
         }
     }

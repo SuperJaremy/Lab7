@@ -11,8 +11,9 @@ import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.net.SocketException;
 import java.nio.channels.DatagramChannel;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -42,48 +43,46 @@ public class Communicator {
         dcSender.close();
         isOpened=false;
     }
-    public void sendAnswer(String username, Answer answer) throws IOException{
+    public boolean sendAnswer(String username, Answer answer) throws IOException{
         if(isOpened) {
             MessageSender ms = new MessageSender(dcSender);
             SocketAddress sender = users.get(username);
             users.remove(username);
-            Senders.remove(sender);
             if(sender!=null)
-                ms.sendMessage(new MessageFormer(answer),sender);
-            else
-                throw new IOException("Нет пользователя с таким именем: "+username);
+                synchronized (dcSender) {
+                    ms.sendMessage(new MessageFormer(answer), sender);
+                    logger.info("Отправлен ответ на адрес: "+sender);
+                    return true;
+                }
+            else {
+                throw new IOException("Нет пользователя с таким именем: " + username);
+            }
         }
         else
             throw new SocketException("Communicator не был открыт");
     }
-    public boolean receiveMessage() throws ExitException{
+    public int receiveMessage() throws ExitException, IOException{
         if(isOpened)
             try{
                 MessageReceiver mr= new MessageReceiver(dcReceiver);
-                MessageFormer mf = mr.receiveMessage();
+                return  mr.receiveMessage();
             }
         catch (IOException e){
                 logger.error("Ошибка на сервере",e);
-                return false;
+                throw e;
         }
-        return true;
+        throw new SocketException();
     }
-    public Meta getMeta() throws IOException, ClassNotFoundException{
-        Iterator<MessageFormer> iterator = Senders.values().iterator();
-        while(iterator.hasNext()){
-            try{
-                MessageFormer mf = iterator.next();
-                if(mf.hasEnded) {
-                    Meta i = mf.toMeta();
-                    users.put(i.getUsername(), mf.sender);
-                    return i;
-                }
-            }
-            catch (IOException | ClassNotFoundException e){
-                if(!iterator.hasNext())
-                    throw e;
+    public synchronized Meta getMeta() throws IOException, ClassNotFoundException{
+        for (MessageFormer mf : Senders.values()) {
+            if (mf.hasEnded) {
+                Meta i = mf.toMeta();
+                users.put(i.getUsername(), mf.sender);
+                Senders.remove(mf.sender);
+                return i;
             }
         }
-        return null;
+        logger.error("Поток обрабатывает несуществующий запрос");
+        throw new IndexOutOfBoundsException();
     }
 }

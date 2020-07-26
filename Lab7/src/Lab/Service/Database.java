@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import java.sql.*;
 import java.util.Optional;
 import java.util.Vector;
+import java.util.concurrent.locks.ReentrantLock;
 
 
 public class Database implements  AutoCloseable{
@@ -31,6 +32,7 @@ public class Database implements  AutoCloseable{
     private PreparedStatement updateCoordinates=null;
     private PreparedStatement updateAlbum=null;
     private PreparedStatement getId=null;
+    private final static ReentrantLock lock = new ReentrantLock(true);
 
     public Database(){
         try{
@@ -81,6 +83,7 @@ public class Database implements  AutoCloseable{
 
     public boolean uploadCollection(){
         if(upload!=null){
+            lock.lock();
             try{
                 Vector<MusicBand> tempV=new Vector<>();
                 ResultSet res = upload.executeQuery();
@@ -105,15 +108,25 @@ public class Database implements  AutoCloseable{
             catch (SQLException e){
                 logger.error("Не удалось обновить коллекцию: "+e.getLocalizedMessage());
             }
+            finally {
+                lock.unlock();
+            }
         }
         return false;
     }
 
     public static Vector<MusicBand> GetCollection(){
-        return V;
+        lock.lock();
+        try {
+            return V;
+        }
+        finally {
+            lock.unlock();
+        }
     }
 
-    synchronized public boolean Add(MusicBand mb, String login){
+    public boolean Add(MusicBand mb, String login){
+        lock.lock();
         try {
             connection.setAutoCommit(false);
             connection.commit();
@@ -167,9 +180,13 @@ public class Database implements  AutoCloseable{
             }
             return false;
         }
+        finally {
+            lock.unlock();
+        }
     }
 
-    public synchronized boolean removeId(Integer id, String username){
+    public boolean removeId(Integer id, String username){
+        lock.lock();
         Vector<Integer> possibleIds = findIds(username);
         if(!possibleIds.contains(id))
             return false;
@@ -203,9 +220,13 @@ public class Database implements  AutoCloseable{
             }
             return false;
         }
+        finally {
+            lock.unlock();
+        }
     }
 
-    public synchronized boolean clear(String username){
+    public boolean clear(String username){
+        lock.lock();
         Vector<Integer> ids = findIds(username);
         try{
             connection.setAutoCommit(false);
@@ -245,9 +266,13 @@ public class Database implements  AutoCloseable{
             }
             return false;
         }
+        finally {
+            lock.unlock();
+        }
     }
 
-    public synchronized boolean updateId(Integer id, MusicBand mb, String username){
+    public boolean updateId(Integer id, MusicBand mb, String username){
+        lock.lock();
         Vector<Integer> possibleIds = findIds(username);
         if(!possibleIds.contains(id))
             return false;
@@ -299,6 +324,9 @@ public class Database implements  AutoCloseable{
                 }
             }
             return false;
+        }
+        finally {
+            lock.unlock();
         }
     }
 

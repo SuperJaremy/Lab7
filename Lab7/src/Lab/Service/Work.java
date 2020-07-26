@@ -2,13 +2,12 @@ package Lab.Service;
 
 import Lab.Commands.Command;
 import Lab.Commands.*;
-import Lab.Objects.MusicBand;
 
 import java.util.*;
 
 public class Work {
     private static final  Map<String, Command> Commands = new HashMap<>();
-    private final Queue<Command> History = new LinkedList<>();
+    private final static Queue<Command> History = new LinkedList<>();
     public static Map<String,Command> getCommands(){
         return Commands;
     }
