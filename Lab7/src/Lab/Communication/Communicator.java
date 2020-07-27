@@ -51,7 +51,6 @@ public class Communicator {
             if(sender!=null)
                 synchronized (dcSender) {
                     ms.sendMessage(new MessageFormer(answer), sender);
-                    logger.info("Отправлен ответ на адрес: "+sender);
                     return true;
                 }
             else {

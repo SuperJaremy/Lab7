@@ -1,13 +1,16 @@
 package Lab.Communication;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
-import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 import java.util.Arrays;
 
 class MessageSender {
+    private final static Logger logger = LogManager.getLogger();
     byte[] arr;
     DatagramChannel dc;
     MessageSender(DatagramChannel dc){
@@ -30,5 +33,6 @@ class MessageSender {
             }
             ByteBuffer message = ByteBuffer.wrap(mf.ENDER.getBytes());
             dc.send(message,targetAddress);
+            logger.info("Отправлено сообщение на адрес: "+targetAddress);
     }
 }
