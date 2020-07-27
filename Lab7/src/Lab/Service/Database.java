@@ -1,6 +1,5 @@
 package Lab.Service;
 
-import Lab.Communication.ExitException;
 import Lab.Objects.Album;
 import Lab.Objects.Coordinates;
 import Lab.Objects.MusicBand;
@@ -10,7 +9,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 import java.util.Optional;
-import java.util.Scanner;
 import java.util.Vector;
 import java.util.concurrent.locks.ReentrantLock;
 
