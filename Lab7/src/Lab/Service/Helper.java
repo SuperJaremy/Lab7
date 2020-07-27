@@ -6,6 +6,7 @@ import Lab.Objects.MusicBand;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Helper {
     public static LocalDate getLocalDateFromDate(Date d){
@@ -18,5 +19,12 @@ public class Helper {
             result.append(Integer.toString((value & 0xff) + 0x100, 16).substring(1));
         }
         return result.toString();
+    }
+    public static String checkWithExit(Scanner input){
+        System.out.println("Чтобы прервать операцию введите exit");
+        String line = input.nextLine().trim();
+        if(line.equals("exit"))
+            return null;
+        return line;
     }
 }

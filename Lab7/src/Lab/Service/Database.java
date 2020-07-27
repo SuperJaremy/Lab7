@@ -1,5 +1,6 @@
 package Lab.Service;
 
+import Lab.Communication.ExitException;
 import Lab.Objects.Album;
 import Lab.Objects.Coordinates;
 import Lab.Objects.MusicBand;
@@ -9,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 import java.util.Optional;
+import java.util.Scanner;
 import java.util.Vector;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -33,13 +35,28 @@ public class Database implements  AutoCloseable{
     private PreparedStatement updateAlbum=null;
     private PreparedStatement getId=null;
     private final static ReentrantLock lock = new ReentrantLock(true);
+    private static String username="";
+    private static String password="";
+
+    public static boolean authorize(String username, String password){
+        try{
+            DriverManager.getConnection("jdbc:postgresql://localhost:15683/MusicBands",
+                    username, password);
+            Database.username= username;
+            Database.password=password;
+            return true;
+        }
+        catch (SQLException e){
+            logger.warn("Неверный логин и/или пароль");
+            return false;
+        }
+    }
 
     public Database(){
         try{
             Class.forName("org.postgresql.Driver");
             connection=DriverManager.getConnection("jdbc:postgresql://localhost:15683/MusicBands",
-                    "postgres",
-                    "superPassword");
+                    username, password);
             upload=connection.prepareStatement("SELECT * FROM ((public.\"MusicBands\" INNER " +
                     "JOIN public.\"Coordinates\" USING(music_band_id))" +
                     " LEFT JOIN public.\"Albums\" USING (music_band_id))");

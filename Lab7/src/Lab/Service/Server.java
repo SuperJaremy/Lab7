@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.*;
 
 
@@ -22,6 +23,15 @@ public class Server {
     public boolean start() {
         try {
             if(!Authorizator.create())
+                return false;
+            Scanner input = new Scanner(System.in);
+            System.out.println("Введите логин");
+            String username = Helper.checkWithExit(input);
+            if(username==null)
+                return true;
+            System.out.println("Введите пароль");
+            String password = Helper.checkWithExit(input);
+            if(!Database.authorize(username,password))
                 return false;
             try(Database db = new Database()){
                 if(!db.uploadCollection())
