@@ -53,8 +53,10 @@ public class Database implements  AutoCloseable{
     public Database(){
         try{
             Class.forName("org.postgresql.Driver");
+            logger.info("Подключаемся к базе");
             connection=DriverManager.getConnection("jdbc:postgresql://localhost:15683/MusicBands",
                     username, password);
+            logger.info("Подключение к базе получено");
             upload=connection.prepareStatement("SELECT * FROM ((public.\"MusicBands\" INNER " +
                     "JOIN public.\"Coordinates\" USING(music_band_id))" +
                     " LEFT JOIN public.\"Albums\" USING (music_band_id))");
@@ -118,6 +120,7 @@ public class Database implements  AutoCloseable{
                     )));
                 }
                 V=tempV;
+                logger.info("Коллекция успешно загружена");
                 return true;
             }
             catch (SQLException e){
@@ -181,6 +184,7 @@ public class Database implements  AutoCloseable{
             V.add(mb);
             connection.commit();
             connection.setAutoCommit(true);
+            logger.info("В коллекцию добавлен новый элемент");
             return true;
         }
         catch (SQLException e){
@@ -219,6 +223,7 @@ public class Database implements  AutoCloseable{
             connection.commit();
             connection.setAutoCommit(true);
             V.remove(getById(id));
+            logger.info("Удалён элемент из коллекции");
             return true;
         }
         catch (SQLException e){
@@ -266,10 +271,11 @@ public class Database implements  AutoCloseable{
             }
             for(int i :ids)
                 V.remove(getById(i));
+            logger.info("Объекты пользователя "+username+" удалены");
             return true;
         }
         catch (SQLException e){
-            logger.error("Не удалось удалить все элементы пользователя");
+            logger.error("Не удалось удалить все элементы пользователя "+username);
             e.printStackTrace();
             if(connection!=null) {
                 try {
@@ -324,6 +330,7 @@ public class Database implements  AutoCloseable{
             connection.commit();
             connection.setAutoCommit(true);
             getById(id).update(mb);
+            logger.info("Элемент коллекции изменён");
             return true;
             }
         catch (SQLException e){
@@ -387,5 +394,6 @@ public class Database implements  AutoCloseable{
             listIds.close();
         if(getId!=null)
             getId.close();
+        logger.info("Отключение от базы");
     }
 }

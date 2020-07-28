@@ -37,7 +37,6 @@ public class Server {
                 if(!db.uploadCollection())
                     return false;
             }
-            logger.info("Коллекция загружена");
             try {
                 communicator.open();
             } catch (IOException e) {

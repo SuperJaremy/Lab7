@@ -2,6 +2,8 @@ package Lab.Service;
 
 import Lab.Commands.Command;
 import Lab.Commands.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.*;
 
@@ -14,6 +16,7 @@ public class Work {
     static Answer falseAnswer= new Answer("Такой команды не существует",
             false,false);
     private String username;
+    private static final Logger logger = LogManager.getLogger();
     public Work(String username){
         this.username=username;
     }
@@ -56,6 +59,7 @@ public class Work {
         Answer answer;
         String command = meta.getName();
         if(Commands.containsKey(command)) {
+            logger.info("Исполняется команда "+command);
             answer = Commands.get(command).act(meta, this);
             if (answer.isSuccess()) {
                 if (History.size() == 8) {

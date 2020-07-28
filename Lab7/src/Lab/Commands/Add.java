@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.sql.SQLException;
+import java.util.Vector;
 
 
 public class Add extends Command {
@@ -25,7 +26,9 @@ public class Add extends Command {
 
     @Override
     public Answer act(Meta meta, Work work) {
-        if(Database.GetCollection().get(Database.GetCollection().size()-1).getId()<=Integer.MAX_VALUE) {
+        Vector<MusicBand> V = Database.GetCollection();
+        int size = V.size();
+        if(size==0||V.get(size-1).getId()<=Integer.MAX_VALUE) {
             MusicBand mb;
             mb = MusicBand.create(meta.getElement().getElem());
             try(Database db = new Database()) {
@@ -34,7 +37,7 @@ public class Add extends Command {
             }
             catch (SQLException e){
                 logger.error("Ошибка соединения с базой данных");
-                return new Answer("Ошибка прилодения",false,true);
+                return new Answer("Ошибка приложения",false,true);
             }
         }
         return new Answer("Слишком много элементов в коллекции",false,exit);

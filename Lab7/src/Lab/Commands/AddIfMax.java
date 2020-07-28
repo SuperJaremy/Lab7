@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.sql.SQLException;
 import java.util.Optional;
+import java.util.Vector;
 
 public class AddIfMax extends Command {
     private final static Logger logger = LogManager.getLogger();
@@ -27,8 +28,9 @@ public class AddIfMax extends Command {
     public Answer act(Meta meta, Work work) {
         MusicBand mb;
         mb = MusicBand.create(meta.getElement().getElem());
-        Optional<MusicBand> MAX = Database.GetCollection().stream().max(MusicBand::compareTo);
-        if(Database.GetCollection().get(Database.GetCollection().size()-1).getId()<=Integer.MAX_VALUE)
+        Vector<MusicBand> V = Database.GetCollection();
+        Optional<MusicBand> MAX = V.stream().max(MusicBand::compareTo);
+        if(V.get(V.size()-1).getId()<=Integer.MAX_VALUE)
             if(MAX.isPresent()){
                if(mb.compareTo(MAX.get()) > 0) {
                    try(Database db =new Database()) {

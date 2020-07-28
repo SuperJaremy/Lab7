@@ -46,6 +46,7 @@ class MessageFormer {
         ObjectInputStream ois = new ObjectInputStream(bais);
         Meta meta = (Meta) ois.readObject();
         ois.close();
+        logger.info("Сообщение с адреса: "+sender+" успешно собрано");
         return meta;
     }
 }
