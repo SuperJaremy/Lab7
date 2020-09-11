@@ -207,9 +207,9 @@ public class Database implements  AutoCloseable{
     public boolean removeId(Integer id, String username){
         lock.lock();
         Vector<Integer> possibleIds = findIds(username);
+        try {
         if(!possibleIds.contains(id))
             return false;
-        try {
             connection.setAutoCommit(false);
             connection.commit();
             removeBand.setInt(1,id);
@@ -295,9 +295,9 @@ public class Database implements  AutoCloseable{
     public boolean updateId(Integer id, MusicBand mb, String username){
         lock.lock();
         Vector<Integer> possibleIds = findIds(username);
+        try {
         if(!possibleIds.contains(id))
             return false;
-        try {
             connection.setAutoCommit(false);
             connection.commit();
             updateBand.setString(1, mb.getName());
