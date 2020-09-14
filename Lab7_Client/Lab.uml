@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Lab</OriginalElement>
+  <nodes>
+    <node x="135.1910731003336" y="430.0">Lab.Service.Authorizator</node>
+    <node x="809.9288779783828" y="800.0">Lab.Objects.Validation.AlbumValidator</node>
+    <node x="4847.952141122518" y="1490.0">Lab.Commands.AddIfMax</node>
+    <node x="3687.952141122518" y="1490.0">Lab.Commands.SumOfNumberOfParticipants</node>
+    <node x="3299.0497020981275" y="1490.0">Lab.Commands.Exit</node>
+    <node x="3191.0497020981275" y="1490.0">Lab.Commands.Clear</node>
+    <node x="104.99107310033378" y="1030.0">Lab.Objects.Validation.ConsoleValidation.ConsoleAlbumValidator</node>
+    <node x="2103.794544444393" y="1980.0">Lab.Main</node>
+    <node x="196.09999999999945" y="180.0">Lab.Service.SkipBox</node>
+    <node x="989.9288779783828" y="800.0">Lab.Objects.Validation.CoordinatesValidator</node>
+    <node x="854.0497020981275" y="0.0">Lab.Objects.Album</node>
+    <node x="4543.952141122518" y="1490.0">Lab.Commands.RemoveFirst</node>
+    <node x="173.31121111105995" y="1170.0">Lab.Objects.Validation.ConsoleValidation.ConsoleMusicBandValidator</node>
+    <node x="1624.9109132091878" y="180.0">Lab.Objects.MusicBand</node>
+    <node x="355.19107310033405" y="1030.0">Lab.Objects.Validation.ConsoleValidation.ConsoleCoordinatesValidator</node>
+    <node x="1581.5497020981275" y="0.0">Lab.Objects.Coordinates</node>
+    <node x="1350.81121111106" y="1170.0">Lab.Communication.Communicator</node>
+    <node x="4979.952141122518" y="1490.0">Lab.Commands.Update</node>
+    <node x="637.6999999999996" y="0.0">Lab.Objects.MusicGenre</node>
+    <node x="4443.952141122518" y="1490.0">Lab.Commands.Info</node>
+    <node x="861.6820352308048" y="1030.0">Lab.Objects.Validation.MusicBandValidator</node>
+    <node x="2078.0497020981275" y="1170.0">Lab.Service.FileTester</node>
+    <node x="3625.452141122518" y="1270.0">Lab.Commands.Command</node>
+    <node x="2975.0497020981275" y="1490.0">Lab.Commands.Add</node>
+    <node x="2482.0497020981275" y="1170.0">Lab.Commands.DontReportException</node>
+    <node x="1591.9288779783828" y="1030.0">Lab.Objects.Validation.FileValidation.FileAlbumValidator</node>
+    <node x="581.56121111106" y="1900.0">Lab.Service.ConsoleWork</node>
+    <node x="1371.81121111106" y="800.0">Lab.Communication.MessageFormer</node>
+    <node x="3400.95" y="530.0">Lab.Commands.Meta</node>
+    <node x="3452.055257653683" y="430.0">Lab.Commands.Element</node>
+    <node x="2226.0497020981275" y="1170.0">Lab.Objects.Validation.FileValidation.FileMusicBandValidator</node>
+    <node x="3955.952141122518" y="1490.0">Lab.Commands.PrintFieldDescendingNumberOfParticipants</node>
+    <node x="0.0" y="2055.0">Lab.Objects.Validation.ConsoleValidation.LineReader</node>
+    <node x="4699.952141122518" y="1490.0">Lab.Commands.RemoveByID</node>
+    <node x="1817.0497020981275" y="1030.0">Lab.Objects.Validation.FileValidation.FileCoordinatesValidator</node>
+    <node x="3560.06121111106" y="1760.0">Lab.Service.Work</node>
+    <node x="4343.952141122518" y="1490.0">Lab.Commands.Help</node>
+    <node x="2875.0497020981275" y="1490.0">Lab.Commands.Show</node>
+    <node x="2703.0497020981275" y="1490.0">Lab.Commands.ExecuteScript</node>
+    <node x="2229.06121111106" y="1270.0">Lab.Service.FileWork</node>
+    <node x="637.9288779783828" y="530.0">Lab.Service.Answer</node>
+    <node x="3399.0497020981275" y="1490.0">Lab.Commands.CountByNumberOfParticipants</node>
+    <node x="1229.9288779783828" y="1030.0">Lab.Communication.MessageSender</node>
+    <node x="3067.0497020981275" y="1490.0">Lab.Commands.History</node>
+    <node x="1402.9288779783828" y="1030.0">Lab.Communication.MessageReceiver</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Lab.Communication.Communicator" target="Lab.Communication.MessageReceiver">
+      <point x="9.0" y="-15.0" />
+      <point x="1431.81121111106" y="1120.0" />
+      <point x="1444.9288779783828" y="1120.0" />
+      <point x="-42.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.FileWork" target="Lab.Commands.DontReportException">
+      <point x="49.77777777777783" y="-15.0" />
+      <point x="2334.838988888838" y="1250.0" />
+      <point x="2532.0497020981275" y="1250.0" />
+      <point x="-50.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.MusicBand" target="Lab.Objects.Album">
+      <point x="-10.0" y="-15.0" />
+      <point x="1674.9109132091878" y="100.0" />
+      <point x="923.1925592409846" y="100.0" />
+      <point x="25.14285714285711" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.CountByNumberOfParticipants" target="Lab.Commands.Element">
+      <point x="0.0" y="-15.0" />
+      <point x="3531.0497020981275" y="1330.0" />
+      <point x="3504.055257653683" y="1330.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Help" target="Lab.Commands.Command">
+      <point x="-10.0" y="-15.0" />
+      <point x="4373.952141122518" y="1420.0" />
+      <point x="3696.361232031609" y="1420.0" />
+      <point x="18.90909090909099" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.CountByNumberOfParticipants" target="Lab.Commands.Meta">
+      <point x="-52.80000000000018" y="-15.0" />
+      <point x="3478.2497020981273" y="1330.0" />
+      <point x="3442.061111111111" y="1330.0" />
+      <point x="1.1111111111113132" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.MusicBandValidator" target="Lab.Objects.Album">
+      <point x="-36.0" y="-15.0" />
+      <point x="921.6820352308048" y="930.0" />
+      <point x="755.4288779783828" y="930.0" />
+      <point x="755.4288779783828" y="160.0" />
+      <point x="872.9068449552703" y="160.0" />
+      <point x="-25.14285714285711" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleCoordinatesValidator" target="Lab.Objects.Validation.CoordinatesValidator">
+      <point x="105.60000000000002" y="-15.0" />
+      <point x="592.791073100334" y="990.0" />
+      <point x="1052.328877978383" y="990.0" />
+      <point x="-41.60000000000002" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Info" target="Lab.Service.Work">
+      <point x="20.0" y="15.0" />
+      <point x="4503.952141122518" y="1650.0" />
+      <point x="3621.5246257452063" y="1650.0" />
+      <point x="21.463414634146375" y="-15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.FileValidation.FileMusicBandValidator" target="Lab.Objects.MusicBand">
+      <point x="89.59999999999991" y="-15.0" />
+      <point x="2427.6497020981274" y="1150.0" />
+      <point x="2393.4999999999995" y="1150.0" />
+      <point x="2393.4999999999995" y="300.0" />
+      <point x="1669.9109132091878" y="300.0" />
+      <point x="-15.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Help" target="Lab.Service.Work">
+      <point x="20.0" y="15.0" />
+      <point x="4403.952141122518" y="1630.0" />
+      <point x="3617.622186720816" y="1630.0" />
+      <point x="17.560975609756042" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Objects.MusicBand">
+      <point x="-30.0" y="-15.0" />
+      <point x="2981.0497020981275" y="1330.0" />
+      <point x="2954.182035230805" y="1330.0" />
+      <point x="2954.182035230805" y="280.0" />
+      <point x="1689.9109132091878" y="280.0" />
+      <point x="5.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.ExecuteScript" target="Lab.Commands.Meta">
+      <point x="0.0" y="-15.0" />
+      <point x="2779.0497020981275" y="1470.0" />
+      <point x="2769.3497020981276" y="1470.0" />
+      <point x="2769.3497020981276" y="670.0" />
+      <point x="3415.394444444444" y="670.0" />
+      <point x="-25.555555555555657" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Commands.Element">
+      <point x="24.0" y="-15.0" />
+      <point x="5052.581317002773" y="490.0" />
+      <point x="3548.6266862251114" y="490.0" />
+      <point x="44.57142857142833" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Commands.Meta">
+      <point x="-9.33333333333303" y="-15.0" />
+      <point x="4894.618807789185" y="1470.0" />
+      <point x="4906.118807789185" y="1470.0" />
+      <point x="4906.118807789185" y="640.0" />
+      <point x="3473.172222222222" y="640.0" />
+      <point x="32.22222222222217" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.ConsoleWork" target="Lab.Service.Answer">
+      <point x="-6.7999999999999545" y="-15.0" />
+      <point x="642.76121111106" y="1840.0" />
+      <point x="629.691073100334" y="1840.0" />
+      <point x="629.691073100334" y="600.0" />
+      <point x="649.9288779783828" y="600.0" />
+      <point x="-36.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveByID" target="Lab.Commands.Element">
+      <point x="51.19999999999982" y="-15.0" />
+      <point x="4815.152141122518" y="1470.0" />
+      <point x="4828.563352233578" y="1470.0" />
+      <point x="4828.563352233578" y="510.0" />
+      <point x="3518.912400510826" y="510.0" />
+      <point x="14.857142857143117" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Show">
+      <point x="-21.463414634146375" y="-15.0" />
+      <point x="3578.5977964769136" y="1650.0" />
+      <point x="2895.0497020981275" y="1650.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Meta" target="Lab.Commands.Element">
+      <point x="0.0" y="-15.0" />
+      <point x="3440.95" y="500.0" />
+      <point x="3474.3409719393976" y="500.0" />
+      <point x="-29.714285714285325" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Show" target="Lab.Commands.Command">
+      <point x="10.0" y="-15.0" />
+      <point x="2925.0497020981275" y="1360.0" />
+      <point x="3633.330929001306" y="1360.0" />
+      <point x="-44.12121212121201" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.SumOfNumberOfParticipants" target="Lab.Commands.Command">
+      <point x="-93.0" y="-15.0" />
+      <point x="3718.952141122518" y="1470.0" />
+      <point x="3680.603656274033" y="1470.0" />
+      <point x="3.1515151515150137" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveFirst" target="Lab.Commands.Meta">
+      <point x="51.0" y="-15.0" />
+      <point x="4662.952141122518" y="1470.0" />
+      <point x="4682.563352233578" y="1470.0" />
+      <point x="4682.563352233578" y="670.0" />
+      <point x="3466.5055555555555" y="670.0" />
+      <point x="25.555555555555657" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.ConsoleWork" target="Lab.Commands.Meta">
+      <point x="20.40000000000009" y="-15.0" />
+      <point x="669.96121111106" y="1820.0" />
+      <point x="651.691073100334" y="1820.0" />
+      <point x="651.691073100334" y="1010.0" />
+      <point x="1208.4288779783828" y="1010.0" />
+      <point x="1208.4288779783828" y="620.0" />
+      <point x="3404.2833333333333" y="620.0" />
+      <point x="-36.666666666666515" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Meta">
+      <point x="-27.317073170731874" y="-15.0" />
+      <point x="3572.744137940328" y="1680.0" />
+      <point x="2692.5497020981275" y="1680.0" />
+      <point x="2692.5497020981275" y="660.0" />
+      <point x="3413.172222222222" y="660.0" />
+      <point x="-27.77777777777783" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleAlbumValidator" target="Lab.Service.SkipBox">
+      <point x="0.0" y="-15.0" />
+      <point x="212.99107310033378" y="940.0" />
+      <point x="289.6910731003336" y="940.0" />
+      <point x="289.6910731003336" y="410.0" />
+      <point x="253.29999999999927" y="410.0" />
+      <point x="5.199999999999818" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Element" target="Lab.Objects.MusicBand">
+      <point x="-26.0" y="-15.0" />
+      <point x="3478.055257653683" y="270.0" />
+      <point x="1699.9109132091878" y="270.0" />
+      <point x="15.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Command" target="Lab.Commands.Meta">
+      <point x="0.0" y="-15.0" />
+      <point x="3677.452141122518" y="770.0" />
+      <point x="3444.2833333333333" y="770.0" />
+      <point x="3.333333333333485" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.SumOfNumberOfParticipants" target="Lab.Service.Work">
+      <point x="62.0" y="15.0" />
+      <point x="3873.952141122518" y="1590.0" />
+      <point x="3609.8173086720353" y="1590.0" />
+      <point x="9.756097560975377" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.FileWork" target="Lab.Objects.MusicBand">
+      <point x="24.888888888888687" y="-15.0" />
+      <point x="2309.9500999999486" y="1230.0" />
+      <point x="2460.5497020981275" y="1230.0" />
+      <point x="2460.5497020981275" y="290.0" />
+      <point x="1679.9109132091878" y="290.0" />
+      <point x="-5.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Add">
+      <point x="-17.560975609756042" y="-15.0" />
+      <point x="3582.500235501304" y="1630.0" />
+      <point x="2993.0497020981275" y="1630.0" />
+      <point x="-18.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Show" target="Lab.Service.Work">
+      <point x="20.0" y="15.0" />
+      <point x="2935.0497020981275" y="1640.0" />
+      <point x="3580.5490159891087" y="1640.0" />
+      <point x="-19.51219512195121" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveByID" target="Lab.Commands.Meta">
+      <point x="25.600000000000364" y="-15.0" />
+      <point x="4789.552141122518" y="1460.0" />
+      <point x="4817.563352233578" y="1460.0" />
+      <point x="4817.563352233578" y="650.0" />
+      <point x="3470.95" y="650.0" />
+      <point x="30.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Commands.Element">
+      <point x="-18.0" y="-15.0" />
+      <point x="2993.0497020981275" y="1320.0" />
+      <point x="2968.6463209450903" y="1320.0" />
+      <point x="2968.6463209450903" y="490.0" />
+      <point x="3459.4838290822545" y="490.0" />
+      <point x="-44.57142857142844" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.ExecuteScript">
+      <point x="-25.365853658536707" y="-15.0" />
+      <point x="3574.6953574525232" y="1670.0" />
+      <point x="2741.0497020981275" y="1670.0" />
+      <point x="-38.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Update">
+      <point x="35.121951219512084" y="-15.0" />
+      <point x="3635.183162330572" y="1720.0" />
+      <point x="5003.952141122518" y="1720.0" />
+      <point x="-24.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Service.Work">
+      <point x="18.0" y="15.0" />
+      <point x="3029.0497020981275" y="1620.0" />
+      <point x="3584.451455013499" y="1620.0" />
+      <point x="-15.609756097560876" y="-15.0" />
+    </edge>
+    <edge source="Lab.Main" target="Lab.Service.Work">
+      <point x="20.0" y="-15.0" />
+      <point x="2163.794544444393" y="1955.0" />
+      <point x="3626.7278777777265" y="1955.0" />
+      <point x="26.666666666666515" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleCoordinatesValidator" target="Lab.Objects.Coordinates">
+      <point x="0.0" y="-15.0" />
+      <point x="487.19107310033405" y="930.0" />
+      <point x="333.6910731003336" y="930.0" />
+      <point x="333.6910731003336" y="340.0" />
+      <point x="889.9288779783828" y="340.0" />
+      <point x="889.9288779783828" y="140.0" />
+      <point x="1591.2639878124132" y="140.0" />
+      <point x="-58.28571428571422" y="15.0" />
+    </edge>
+    <edge source="Lab.Main" target="Lab.Service.ConsoleWork">
+      <point x="-20.0" y="-15.0" />
+      <point x="2123.794544444393" y="1955.0" />
+      <point x="649.56121111106" y="1955.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.ExecuteScript" target="Lab.Commands.DontReportException">
+      <point x="-30.40000000000009" y="-15.0" />
+      <point x="2748.6497020981274" y="1470.0" />
+      <point x="2739.932035230805" y="1470.0" />
+      <point x="2739.932035230805" y="1250.0" />
+      <point x="2632.0497020981275" y="1250.0" />
+      <point x="50.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.SumOfNumberOfParticipants" target="Lab.Commands.Meta">
+      <point x="31.0" y="-15.0" />
+      <point x="3842.952141122518" y="1470.0" />
+      <point x="3868.452141122518" y="1470.0" />
+      <point x="3868.452141122518" y="760.0" />
+      <point x="3446.5055555555555" y="760.0" />
+      <point x="5.555555555555657" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.History" target="Lab.Service.Work">
+      <point x="26.0" y="15.0" />
+      <point x="3145.0497020981275" y="1600.0" />
+      <point x="3588.3538940378894" y="1600.0" />
+      <point x="-11.707317073170543" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.FileWork" target="Lab.Commands.Meta">
+      <point x="37.333333333333485" y="-15.0" />
+      <point x="2322.3945444443934" y="1240.0" />
+      <point x="2471.5497020981275" y="1240.0" />
+      <point x="2471.5497020981275" y="650.0" />
+      <point x="3410.95" y="650.0" />
+      <point x="-30.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.RemoveByID">
+      <point x="27.317073170731874" y="-15.0" />
+      <point x="3627.378284281792" y="1680.0" />
+      <point x="4731.952141122518" y="1680.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Objects.MusicBand">
+      <point x="46.66666666666697" y="-15.0" />
+      <point x="4950.618807789185" y="1470.0" />
+      <point x="4969.664650336106" y="1470.0" />
+      <point x="4969.664650336106" y="250.0" />
+      <point x="1719.9109132091878" y="250.0" />
+      <point x="35.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.History" target="Lab.Commands.Command">
+      <point x="13.0" y="-15.0" />
+      <point x="3132.0497020981275" y="1400.0" />
+      <point x="3645.936989607366" y="1400.0" />
+      <point x="-31.515151515151956" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.CountByNumberOfParticipants">
+      <point x="-1.9512195121951663" y="-15.0" />
+      <point x="3598.109991598865" y="1550.0" />
+      <point x="3465.0497020981275" y="1550.0" />
+      <point x="-66.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleCoordinatesValidator" target="Lab.Service.SkipBox">
+      <point x="-105.59999999999991" y="-15.0" />
+      <point x="381.59107310033414" y="950.0" />
+      <point x="311.6910731003336" y="950.0" />
+      <point x="311.6910731003336" y="400.0" />
+      <point x="263.69999999999936" y="400.0" />
+      <point x="15.599999999999909" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.Communicator" target="Lab.Communication.MessageSender">
+      <point x="-45.0" y="-15.0" />
+      <point x="1377.81121111106" y="1140.0" />
+      <point x="1267.9288779783828" y="1140.0" />
+      <point x="-38.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Commands.Meta">
+      <point x="6.0" y="-15.0" />
+      <point x="3017.0497020981275" y="1330.0" />
+      <point x="3015.5497020981275" y="1330.0" />
+      <point x="3015.5497020981275" y="710.0" />
+      <point x="3424.2833333333333" y="710.0" />
+      <point x="-16.666666666666515" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.MusicBandValidator" target="Lab.Objects.Coordinates">
+      <point x="-12.0" y="-15.0" />
+      <point x="945.6820352308048" y="920.0" />
+      <point x="777.4288779783828" y="920.0" />
+      <point x="777.4288779783828" y="350.0" />
+      <point x="1538.0497020981275" y="350.0" />
+      <point x="1538.0497020981275" y="150.0" />
+      <point x="1610.6925592409846" y="150.0" />
+      <point x="-38.85714285714289" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Objects.MusicBand">
+      <point x="39.02439024390242" y="-15.0" />
+      <point x="3639.0856013549624" y="1740.0" />
+      <point x="5086.452141122518" y="1740.0" />
+      <point x="5086.452141122518" y="230.0" />
+      <point x="1739.9109132091878" y="230.0" />
+      <point x="55.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleMusicBandValidator" target="Lab.Objects.Validation.ConsoleValidation.ConsoleCoordinatesValidator">
+      <point x="46.5" y="-15.0" />
+      <point x="343.81121111105995" y="1130.0" />
+      <point x="487.19107310033405" y="1130.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Exit" target="Lab.Commands.Command">
+      <point x="10.0" y="-15.0" />
+      <point x="3349.0497020981275" y="1440.0" />
+      <point x="3658.543050213427" y="1440.0" />
+      <point x="-18.90909090909099" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleAlbumValidator" target="Lab.Objects.Album">
+      <point x="-86.40000000000009" y="-15.0" />
+      <point x="126.59107310033369" y="940.0" />
+      <point x="99.86189722007884" y="940.0" />
+      <point x="99.86189722007884" y="480.0" />
+      <point x="92.29107310033396" y="480.0" />
+      <point x="92.29107310033396" y="150.0" />
+      <point x="860.3354163838417" y="150.0" />
+      <point x="-37.71428571428578" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.ConsoleWork" target="Lab.Service.Work">
+      <point x="47.60000000000002" y="-15.0" />
+      <point x="697.1612111110599" y="1870.0" />
+      <point x="3573.3945444443934" y="1870.0" />
+      <point x="-26.666666666666515" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.FileValidation.FileMusicBandValidator" target="Lab.Objects.Validation.FileValidation.FileCoordinatesValidator">
+      <point x="44.80000000000018" y="-15.0" />
+      <point x="2382.8497020981276" y="1080.0" />
+      <point x="1937.0497020981275" y="1080.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.AddIfMax">
+      <point x="31.21951219512175" y="-15.0" />
+      <point x="3631.2807233061817" y="1700.0" />
+      <point x="4875.952141122518" y="1700.0" />
+      <point x="-28.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Commands.Command">
+      <point x="18.0" y="-15.0" />
+      <point x="3029.0497020981275" y="1380.0" />
+      <point x="3639.633959304336" y="1380.0" />
+      <point x="-37.81818181818198" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.PrintFieldDescendingNumberOfParticipants" target="Lab.Commands.Meta">
+      <point x="46.0" y="-15.0" />
+      <point x="4185.952141122518" y="1470.0" />
+      <point x="4226.452141122518" y="1470.0" />
+      <point x="4226.452141122518" y="740.0" />
+      <point x="3450.95" y="740.0" />
+      <point x="10.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Info">
+      <point x="19.51219512195121" y="-15.0" />
+      <point x="3619.573406233011" y="1640.0" />
+      <point x="4463.952141122518" y="1640.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Commands.Meta">
+      <point x="-8.0" y="-15.0" />
+      <point x="5019.952141122518" y="1470.0" />
+      <point x="5027.452141122518" y="1470.0" />
+      <point x="5027.452141122518" y="620.0" />
+      <point x="3477.6166666666663" y="620.0" />
+      <point x="36.666666666666515" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.ConsoleWork" target="Lab.Objects.Validation.ConsoleValidation.ConsoleMusicBandValidator">
+      <point x="-34.0" y="-15.0" />
+      <point x="615.56121111106" y="1860.0" />
+      <point x="291.81121111105995" y="1860.0" />
+      <point x="291.81121111105995" y="1250.0" />
+      <point x="235.31121111105995" y="1250.0" />
+      <point x="-62.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Exit" target="Lab.Service.Work">
+      <point x="20.0" y="15.0" />
+      <point x="3359.0497020981275" y="1560.0" />
+      <point x="3596.1587720866696" y="1560.0" />
+      <point x="-3.9024390243903326" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.ExecuteScript" target="Lab.Service.Work">
+      <point x="38.0" y="15.0" />
+      <point x="2817.0497020981275" y="1660.0" />
+      <point x="3576.6465769647184" y="1660.0" />
+      <point x="-23.41463414634154" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Service.Work">
+      <point x="24.0" y="15.0" />
+      <point x="5051.952141122518" y="1730.0" />
+      <point x="3637.134381842767" y="1730.0" />
+      <point x="37.07317073170725" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.ConsoleWork" target="Lab.Service.Authorizator">
+      <point x="-61.19999999999982" y="-15.0" />
+      <point x="588.3612111110601" y="1880.0" />
+      <point x="0.0" y="1880.0" />
+      <point x="0.0" y="510.0" />
+      <point x="171.1910731003336" y="510.0" />
+      <point x="-36.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Meta" target="Lab.Service.Authorizator">
+      <point x="-26.666666666666515" y="-15.0" />
+      <point x="3414.2833333333333" y="480.0" />
+      <point x="243.1910731003336" y="480.0" />
+      <point x="36.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Commands.Command">
+      <point x="-24.0" y="-15.0" />
+      <point x="5003.952141122518" y="1320.0" />
+      <point x="3727.87638354676" y="1320.0" />
+      <point x="50.42424242424204" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Clear">
+      <point x="-9.756097560975832" y="-15.0" />
+      <point x="3590.305113550084" y="1590.0" />
+      <point x="3213.0497020981275" y="1590.0" />
+      <point x="-22.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.ExecuteScript" target="Lab.Commands.Command">
+      <point x="60.80000000000018" y="-15.0" />
+      <point x="2839.8497020981276" y="1350.0" />
+      <point x="3630.1794138497908" y="1350.0" />
+      <point x="-47.272727272727025" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.Communicator" target="Lab.Service.Answer">
+      <point x="-63.0" y="-15.0" />
+      <point x="1359.81121111106" y="1150.0" />
+      <point x="1219.4288779783828" y="1150.0" />
+      <point x="1219.4288779783828" y="590.0" />
+      <point x="697.9288779783828" y="590.0" />
+      <point x="12.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.SumOfNumberOfParticipants">
+      <point x="7.804878048780665" y="-15.0" />
+      <point x="3607.8660891598406" y="1580.0" />
+      <point x="3749.952141122518" y="1580.0" />
+      <point x="-62.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleMusicBandValidator" target="Lab.Objects.MusicGenre">
+      <point x="-108.5" y="-15.0" />
+      <point x="188.81121111105995" y="1150.0" />
+      <point x="22.0" y="1150.0" />
+      <point x="22.0" y="130.0" />
+      <point x="650.4999999999995" y="130.0" />
+      <point x="-51.200000000000045" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveByID" target="Lab.Commands.Command">
+      <point x="-25.600000000000364" y="-15.0" />
+      <point x="4738.352141122517" y="1360.0" />
+      <point x="3715.2703229406998" y="1360.0" />
+      <point x="37.81818181818198" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Info" target="Lab.Commands.Meta">
+      <point x="30.0" y="-15.0" />
+      <point x="4513.952141122518" y="1470.0" />
+      <point x="4547.563352233578" y="1470.0" />
+      <point x="4547.563352233578" y="690.0" />
+      <point x="3462.061111111111" y="690.0" />
+      <point x="21.111111111111313" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleMusicBandValidator" target="Lab.Objects.Validation.MusicBandValidator">
+      <point x="108.5" y="-15.0" />
+      <point x="405.81121111105995" y="1150.0" />
+      <point x="933.6820352308048" y="1150.0" />
+      <point x="-24.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Help" target="Lab.Commands.Meta">
+      <point x="30.0" y="-15.0" />
+      <point x="4413.952141122518" y="1470.0" />
+      <point x="4447.220205891662" y="1470.0" />
+      <point x="4447.220205891662" y="710.0" />
+      <point x="3457.6166666666663" y="710.0" />
+      <point x="16.666666666666515" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.MusicBandValidator" target="Lab.Objects.Validation.AlbumValidator">
+      <point x="60.0" y="-15.0" />
+      <point x="1017.6820352308048" y="890.0" />
+      <point x="889.9288779783828" y="890.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.PrintFieldDescendingNumberOfParticipants" target="Lab.Commands.Command">
+      <point x="-46.0" y="-15.0" />
+      <point x="4093.952141122518" y="1440.0" />
+      <point x="3690.0582017285788" y="1440.0" />
+      <point x="12.606060606060964" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.History">
+      <point x="-13.65853658536571" y="-15.0" />
+      <point x="3586.4026745256942" y="1610.0" />
+      <point x="3093.0497020981275" y="1610.0" />
+      <point x="-26.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.AlbumValidator" target="Lab.Objects.Album">
+      <point x="40.0" y="-15.0" />
+      <point x="929.9288779783828" y="600.0" />
+      <point x="901.1788779783828" y="600.0" />
+      <point x="901.1788779783828" y="130.0" />
+      <point x="898.0497020981275" y="130.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.FileWork" target="Lab.Service.FileTester">
+      <point x="-12.444444444444343" y="-15.0" />
+      <point x="2272.6167666666156" y="1220.0" />
+      <point x="2142.0497020981275" y="1220.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.MusicBand" target="Lab.Objects.MusicGenre">
+      <point x="-50.0" y="-15.0" />
+      <point x="1634.9109132091878" y="120.0" />
+      <point x="727.2999999999997" y="120.0" />
+      <point x="25.600000000000023" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Authorizator" target="Lab.Service.SkipBox">
+      <point x="-36.0" y="-15.0" />
+      <point x="171.1910731003336" y="410.0" />
+      <point x="232.49999999999955" y="410.0" />
+      <point x="-15.600000000000023" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.Communicator" target="Lab.Commands.Meta">
+      <point x="63.0" y="-15.0" />
+      <point x="1485.81121111106" y="1150.0" />
+      <point x="1794.4288779783828" y="1150.0" />
+      <point x="1794.4288779783828" y="1000.0" />
+      <point x="2251.7320352308047" y="1000.0" />
+      <point x="2251.7320352308047" y="640.0" />
+      <point x="3408.7277777777776" y="640.0" />
+      <point x="-32.22222222222217" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveFirst" target="Lab.Commands.Command">
+      <point x="-51.0" y="-15.0" />
+      <point x="4560.952141122518" y="1390.0" />
+      <point x="3705.815777486154" y="1390.0" />
+      <point x="28.363636363636033" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleMusicBandValidator" target="Lab.Objects.MusicBand">
+      <point x="15.5" y="-15.0" />
+      <point x="312.81121111105995" y="1120.0" />
+      <point x="344.6910731003336" y="1120.0" />
+      <point x="344.6910731003336" y="510.0" />
+      <point x="766.4288779783828" y="510.0" />
+      <point x="766.4288779783828" y="380.0" />
+      <point x="1639.9109132091878" y="380.0" />
+      <point x="-45.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.PrintFieldDescendingNumberOfParticipants">
+      <point x="11.707317073170543" y="-15.0" />
+      <point x="3611.7685281842305" y="1600.0" />
+      <point x="4047.952141122518" y="1600.0" />
+      <point x="-92.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Clear" target="Lab.Service.Work">
+      <point x="22.0" y="15.0" />
+      <point x="3257.0497020981275" y="1580.0" />
+      <point x="3592.2563330622793" y="1580.0" />
+      <point x="-7.804878048780665" y="-15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.MusicBandValidator" target="Lab.Objects.Validation.CoordinatesValidator">
+      <point x="84.0" y="-15.0" />
+      <point x="1041.6820352308048" y="1000.0" />
+      <point x="1093.9288779783828" y="1000.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.FileWork" target="Lab.Service.SkipBox">
+      <point x="-24.888888888888687" y="-15.0" />
+      <point x="2260.1723222221713" y="1230.0" />
+      <point x="2067.5497020981275" y="1230.0" />
+      <point x="2067.5497020981275" y="320.0" />
+      <point x="294.89999999999964" y="320.0" />
+      <point x="46.80000000000018" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.MusicBandValidator" target="Lab.Objects.MusicGenre">
+      <point x="-60.0" y="-15.0" />
+      <point x="897.6820352308048" y="940.0" />
+      <point x="744.4288779783828" y="940.0" />
+      <point x="744.4288779783828" y="140.0" />
+      <point x="701.6999999999996" y="140.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleMusicBandValidator" target="Lab.Objects.Validation.ConsoleValidation.ConsoleAlbumValidator">
+      <point x="-15.5" y="-15.0" />
+      <point x="281.81121111105995" y="1120.0" />
+      <point x="212.99107310033378" y="1120.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.PrintFieldDescendingNumberOfParticipants" target="Lab.Service.Work">
+      <point x="92.0" y="15.0" />
+      <point x="4231.952141122518" y="1610.0" />
+      <point x="3613.7197476964257" y="1610.0" />
+      <point x="13.65853658536571" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Objects.MusicBand">
+      <point x="40.0" y="-15.0" />
+      <point x="5067.952141122518" y="1470.0" />
+      <point x="5063.581317002773" y="1470.0" />
+      <point x="5063.581317002773" y="240.0" />
+      <point x="1729.9109132091878" y="240.0" />
+      <point x="45.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Communication.Communicator">
+      <point x="-33.17073170731692" y="-15.0" />
+      <point x="3566.890479403743" y="1710.0" />
+      <point x="1424.762430623255" y="1710.0" />
+      <point x="1424.762430623255" y="1250.0" />
+      <point x="1451.6112111110601" y="1250.0" />
+      <point x="28.800000000000182" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Exit" target="Lab.Commands.Meta">
+      <point x="-10.0" y="-15.0" />
+      <point x="3329.0497020981275" y="1330.0" />
+      <point x="3324.5497020981275" y="1330.0" />
+      <point x="3324.5497020981275" y="770.0" />
+      <point x="3437.6166666666663" y="770.0" />
+      <point x="-3.333333333333485" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.Communicator" target="Lab.Communication.MessageFormer">
+      <point x="-9.0" y="-15.0" />
+      <point x="1413.81121111106" y="1120.0" />
+      <point x="1392.4288779783828" y="1120.0" />
+      <point x="1392.4288779783828" y="1010.0" />
+      <point x="1417.4112111110599" y="1010.0" />
+      <point x="-30.40000000000009" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageFormer" target="Lab.Service.Answer">
+      <point x="-38.0" y="-15.0" />
+      <point x="1409.81121111106" y="580.0" />
+      <point x="721.9288779783828" y="580.0" />
+      <point x="36.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.FileValidation.FileAlbumValidator" target="Lab.Objects.Album">
+      <point x="64.0" y="-15.0" />
+      <point x="1751.9288779783828" y="1010.0" />
+      <point x="1730.4499999999996" y="1010.0" />
+      <point x="1730.4499999999996" y="600.0" />
+      <point x="2139.5254968253457" y="600.0" />
+      <point x="2139.5254968253457" y="310.0" />
+      <point x="1527.0497020981275" y="310.0" />
+      <point x="1527.0497020981275" y="130.0" />
+      <point x="910.6211306695561" y="130.0" />
+      <point x="12.571428571428669" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.RemoveFirst">
+      <point x="23.41463414634154" y="-15.0" />
+      <point x="3623.4758452574015" y="1660.0" />
+      <point x="4577.952141122518" y="1660.0" />
+      <point x="-34.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.ConsoleWork" target="Lab.Communication.Communicator">
+      <point x="34.0" y="-15.0" />
+      <point x="683.56121111106" y="1810.0" />
+      <point x="662.691073100334" y="1810.0" />
+      <point x="662.691073100334" y="1250.0" />
+      <point x="1365.21121111106" y="1250.0" />
+      <point x="-57.59999999999991" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.FileValidation.FileMusicBandValidator" target="Lab.Objects.Validation.FileValidation.FileAlbumValidator">
+      <point x="0.0" y="-15.0" />
+      <point x="2338.0497020981275" y="1090.0" />
+      <point x="1687.9288779783828" y="1090.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageReceiver" target="Lab.Communication.MessageFormer">
+      <point x="-42.0" y="-15.0" />
+      <point x="1444.9288779783828" y="1010.0" />
+      <point x="1447.81121111106" y="1010.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.FileValidation.FileAlbumValidator" target="Lab.Objects.Validation.AlbumValidator">
+      <point x="0.0" y="-15.0" />
+      <point x="1687.9288779783828" y="870.0" />
+      <point x="953.9288779783828" y="870.0" />
+      <point x="64.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.FileWork" target="Lab.Service.Work">
+      <point x="-37.333333333333485" y="15.0" />
+      <point x="2247.7278777777265" y="1470.0" />
+      <point x="2265.418934688296" y="1470.0" />
+      <point x="2265.418934688296" y="1700.0" />
+      <point x="3568.8416989159377" y="1700.0" />
+      <point x="-31.219512195122206" y="-15.0" />
+    </edge>
+    <edge source="Lab.Objects.MusicBand" target="Lab.Objects.Coordinates">
+      <point x="30.0" y="-15.0" />
+      <point x="1714.9109132091878" y="80.0" />
+      <point x="1649.5497020981275" y="80.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.History" target="Lab.Commands.Meta">
+      <point x="-39.0" y="-15.0" />
+      <point x="3080.0497020981275" y="1330.0" />
+      <point x="3060.793146341916" y="1330.0" />
+      <point x="3060.793146341916" y="720.0" />
+      <point x="3426.5055555555555" y="720.0" />
+      <point x="-14.444444444444343" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.MusicBandValidator" target="Lab.Objects.MusicBand">
+      <point x="36.0" y="-15.0" />
+      <point x="993.6820352308048" y="900.0" />
+      <point x="799.4288779783828" y="900.0" />
+      <point x="799.4288779783828" y="400.0" />
+      <point x="1659.9109132091878" y="400.0" />
+      <point x="-25.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageSender" target="Lab.Communication.MessageFormer">
+      <point x="0.0" y="-15.0" />
+      <point x="1305.9288779783828" y="1010.0" />
+      <point x="1387.0112111110598" y="1010.0" />
+      <point x="-60.80000000000018" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageFormer" target="Lab.Commands.Meta">
+      <point x="38.0" y="-15.0" />
+      <point x="1485.81121111106" y="630.0" />
+      <point x="3406.5055555555555" y="630.0" />
+      <point x="-34.44444444444434" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.FileValidation.FileCoordinatesValidator" target="Lab.Objects.Coordinates">
+      <point x="80.0" y="-15.0" />
+      <point x="2017.0497020981275" y="1010.0" />
+      <point x="2409.95" y="1010.0" />
+      <point x="2409.95" y="50.0" />
+      <point x="1707.8354163838417" y="50.0" />
+      <point x="58.285714285714334" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleMusicBandValidator" target="Lab.Service.SkipBox">
+      <point x="-46.5" y="-15.0" />
+      <point x="250.81121111105995" y="1130.0" />
+      <point x="88.86189722007884" y="1130.0" />
+      <point x="88.86189722007884" y="500.0" />
+      <point x="114.29107310033396" y="500.0" />
+      <point x="114.29107310033396" y="390.0" />
+      <point x="211.69999999999936" y="390.0" />
+      <point x="-36.40000000000009" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Exit">
+      <point x="-5.853658536585499" y="-15.0" />
+      <point x="3594.2075525744744" y="1570.0" />
+      <point x="3319.0497020981275" y="1570.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.CoordinatesValidator" target="Lab.Objects.Coordinates">
+      <point x="52.0" y="-15.0" />
+      <point x="1145.9288779783828" y="600.0" />
+      <point x="1103.1999999999996" y="600.0" />
+      <point x="1103.1999999999996" y="410.0" />
+      <point x="1755.4109132091878" y="410.0" />
+      <point x="1755.4109132091878" y="60.0" />
+      <point x="1688.4068449552703" y="60.0" />
+      <point x="38.85714285714289" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.ConsoleValidation.ConsoleAlbumValidator" target="Lab.Objects.Validation.AlbumValidator">
+      <point x="43.200000000000045" y="-15.0" />
+      <point x="256.1910731003336" y="960.0" />
+      <point x="825.9288779783828" y="960.0" />
+      <point x="-64.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Clear" target="Lab.Commands.Command">
+      <point x="11.0" y="-15.0" />
+      <point x="3246.0497020981275" y="1420.0" />
+      <point x="3652.2400199103968" y="1420.0" />
+      <point x="-25.21212121212102" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Service.Work">
+      <point x="28.0" y="15.0" />
+      <point x="4931.952141122518" y="1710.0" />
+      <point x="3633.231942818377" y="1710.0" />
+      <point x="33.17073170731692" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.FileWork" target="Lab.Objects.Validation.FileValidation.FileMusicBandValidator">
+      <point x="0.0" y="-15.0" />
+      <point x="2285.06121111106" y="1250.0" />
+      <point x="2282.0497020981275" y="1250.0" />
+      <point x="-56.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Service.Answer">
+      <point x="-39.02439024390242" y="-15.0" />
+      <point x="3561.0368208671575" y="1740.0" />
+      <point x="673.9288779783828" y="1740.0" />
+      <point x="-12.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveFirst" target="Lab.Service.Work">
+      <point x="34.0" y="15.0" />
+      <point x="4645.952141122518" y="1670.0" />
+      <point x="3625.4270647695967" y="1670.0" />
+      <point x="25.365853658536707" y="-15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.FileValidation.FileMusicBandValidator" target="Lab.Objects.Validation.MusicBandValidator">
+      <point x="-44.799999999999955" y="-15.0" />
+      <point x="2293.2497020981273" y="1100.0" />
+      <point x="1029.6820352308048" y="1100.0" />
+      <point x="72.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Commands.Element">
+      <point x="28.0" y="-15.0" />
+      <point x="4931.952141122518" y="1460.0" />
+      <point x="4947.771793193249" y="1460.0" />
+      <point x="4947.771793193249" y="500.0" />
+      <point x="3533.7695433679683" y="500.0" />
+      <point x="29.714285714285325" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Commands.Command">
+      <point x="-46.66666666666697" y="-15.0" />
+      <point x="4857.285474455851" y="1350.0" />
+      <point x="3718.421838092215" y="1350.0" />
+      <point x="40.969696969697" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.ConsoleWork" target="Lab.Objects.MusicBand">
+      <point x="-47.59999999999991" y="-15.0" />
+      <point x="601.96121111106" y="1870.0" />
+      <point x="11.0" y="1870.0" />
+      <point x="11.0" y="950.0" />
+      <point x="300.6910731003336" y="950.0" />
+      <point x="300.6910731003336" y="500.0" />
+      <point x="487.4320352308048" y="500.0" />
+      <point x="487.4320352308048" y="370.0" />
+      <point x="1629.9109132091878" y="370.0" />
+      <point x="-55.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Help">
+      <point x="15.609756097560876" y="-15.0" />
+      <point x="3615.670967208621" y="1620.0" />
+      <point x="4363.952141122518" y="1620.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.ExecuteScript" target="Lab.Service.FileWork">
+      <point x="-60.80000000000018" y="-15.0" />
+      <point x="2718.2497020981273" y="1470.0" />
+      <point x="2322.3945444443934" y="1470.0" />
+      <point x="37.333333333333485" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Info" target="Lab.Commands.Command">
+      <point x="-10.0" y="-15.0" />
+      <point x="4473.952141122518" y="1400.0" />
+      <point x="3702.664262334639" y="1400.0" />
+      <point x="25.21212121212102" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Command" target="Lab.Service.Work">
+      <point x="-6.303030303030027" y="15.0" />
+      <point x="3671.1491108194878" y="1460.0" />
+      <point x="3673.5497020981275" y="1460.0" />
+      <point x="3673.5497020981275" y="1550.0" />
+      <point x="3602.012430623255" y="1550.0" />
+      <point x="1.9512195121951663" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.Show" target="Lab.Commands.Meta">
+      <point x="-10.0" y="-15.0" />
+      <point x="2905.0497020981275" y="1330.0" />
+      <point x="2900.5497020981275" y="1330.0" />
+      <point x="2900.5497020981275" y="690.0" />
+      <point x="3419.8388888888885" y="690.0" />
+      <point x="-21.111111111111313" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.CountByNumberOfParticipants" target="Lab.Service.Work">
+      <point x="65.99999999999989" y="15.0" />
+      <point x="3597.0497020981275" y="1540.0" />
+      <point x="3600.06121111106" y="1540.0" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.CountByNumberOfParticipants" target="Lab.Commands.Command">
+      <point x="105.60000000000036" y="-15.0" />
+      <point x="3636.649702098128" y="1470.0" />
+      <point x="3667.9975956679727" y="1470.0" />
+      <point x="-9.454545454545041" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Clear" target="Lab.Commands.Meta">
+      <point x="-11.0" y="-15.0" />
+      <point x="3224.0497020981275" y="1330.0" />
+      <point x="3218.5497020981275" y="1330.0" />
+      <point x="3218.5497020981275" y="750.0" />
+      <point x="3433.172222222222" y="750.0" />
+      <point x="-7.777777777777828" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.Validation.FileValidation.FileCoordinatesValidator" target="Lab.Objects.Validation.CoordinatesValidator">
+      <point x="0.0" y="-15.0" />
+      <point x="1937.0497020981275" y="850.0" />
+      <point x="1177.1288779783827" y="850.0" />
+      <point x="83.19999999999993" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveByID" target="Lab.Service.Work">
+      <point x="32.0" y="15.0" />
+      <point x="4795.952141122518" y="1690.0" />
+      <point x="3629.329503793987" y="1690.0" />
+      <point x="29.26829268292704" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Command">
+      <point x="5.853658536585499" y="-15.0" />
+      <point x="3605.9148696476454" y="1570.0" />
+      <point x="3677.452141122518" y="1570.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.FileWork" target="Lab.Communication.Communicator">
+      <point x="-49.77777777777783" y="-15.0" />
+      <point x="2235.283433333282" y="1250.0" />
+      <point x="1480.4112111110599" y="1250.0" />
+      <point x="57.59999999999991" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.30000000000000016" x="347.9999999999993" y="108.33333333333292" />
+  <SelectedNodes>
+    <node>Lab.Service.Authorizator</node>
+    <node>Lab.Objects.Validation.AlbumValidator</node>
+    <node>Lab.Commands.AddIfMax</node>
+    <node>Lab.Commands.SumOfNumberOfParticipants</node>
+    <node>Lab.Commands.Exit</node>
+    <node>Lab.Commands.Clear</node>
+    <node>Lab.Objects.Validation.ConsoleValidation.ConsoleAlbumValidator</node>
+    <node>Lab.Main</node>
+    <node>Lab.Service.SkipBox</node>
+    <node>Lab.Objects.Validation.CoordinatesValidator</node>
+    <node>Lab.Objects.Album</node>
+    <node>Lab.Commands.RemoveFirst</node>
+    <node>Lab.Objects.Validation.ConsoleValidation.ConsoleMusicBandValidator</node>
+    <node>Lab.Objects.MusicBand</node>
+    <node>Lab.Objects.Validation.ConsoleValidation.ConsoleCoordinatesValidator</node>
+    <node>Lab.Objects.Coordinates</node>
+    <node>Lab.Communication.Communicator</node>
+    <node>Lab.Commands.Update</node>
+    <node>Lab.Objects.MusicGenre</node>
+    <node>Lab.Commands.Info</node>
+    <node>Lab.Objects.Validation.MusicBandValidator</node>
+    <node>Lab.Service.FileTester</node>
+    <node>Lab.Commands.Command</node>
+    <node>Lab.Commands.Add</node>
+    <node>Lab.Commands.DontReportException</node>
+    <node>Lab.Objects.Validation.FileValidation.FileAlbumValidator</node>
+    <node>Lab.Service.ConsoleWork</node>
+    <node>Lab.Communication.MessageFormer</node>
+    <node>Lab.Commands.Meta</node>
+    <node>Lab.Commands.Element</node>
+    <node>Lab.Objects.Validation.FileValidation.FileMusicBandValidator</node>
+    <node>Lab.Commands.PrintFieldDescendingNumberOfParticipants</node>
+    <node>Lab.Objects.Validation.ConsoleValidation.LineReader</node>
+    <node>Lab.Commands.RemoveByID</node>
+    <node>Lab.Objects.Validation.FileValidation.FileCoordinatesValidator</node>
+    <node>Lab.Service.Work</node>
+    <node>Lab.Commands.Help</node>
+    <node>Lab.Commands.Show</node>
+    <node>Lab.Commands.ExecuteScript</node>
+    <node>Lab.Service.FileWork</node>
+    <node>Lab.Service.Answer</node>
+    <node>Lab.Commands.CountByNumberOfParticipants</node>
+    <node>Lab.Communication.MessageSender</node>
+    <node>Lab.Commands.History</node>
+    <node>Lab.Communication.MessageReceiver</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

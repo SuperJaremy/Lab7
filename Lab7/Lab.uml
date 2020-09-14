@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Lab</OriginalElement>
+  <nodes>
+    <node x="112.95744800056968" y="1760.0">Lab.Service.Authorizator</node>
+    <node x="686.0643500643503" y="1510.0">Lab.Commands.AddIfMax</node>
+    <node x="1941.6442920723796" y="1510.0">Lab.Commands.SumOfNumberOfParticipants</node>
+    <node x="2408.693700486822" y="1510.0">Lab.Commands.Exit</node>
+    <node x="1720.5694171125388" y="1510.0">Lab.Commands.Clear</node>
+    <node x="2528.042162751024" y="1970.0">Lab.Main</node>
+    <node x="3450.196596239718" y="990.0">Lab.Communication.ExitException</node>
+    <node x="24.21428571428578" y="1510.0">Lab.Service.Authorizator.AuthorizatorHolder</node>
+    <node x="1033.9010840099454" y="0.0">Lab.Objects.Album</node>
+    <node x="1176.5694171125388" y="1510.0">Lab.Commands.RemoveFirst</node>
+    <node x="289.4574480005697" y="860.0">Lab.Service.Helper</node>
+    <node x="928.475958969786" y="110.0">Lab.Objects.MusicBand</node>
+    <node x="877.9010840099453" y="0.0">Lab.Objects.Coordinates</node>
+    <node x="3168.1354059942673" y="1760.0">Lab.Communication.Communicator</node>
+    <node x="868.6934772629146" y="1510.0">Lab.Commands.Update</node>
+    <node x="729.9010840099453" y="0.0">Lab.Objects.MusicGenre</node>
+    <node x="1841.6442920723796" y="1510.0">Lab.Commands.Info</node>
+    <node x="236.21428571428578" y="1510.0">Lab.Service.FileTester</node>
+    <node x="594.0643500643503" y="1510.0">Lab.Commands.Add</node>
+    <node x="1839.2905405405406" y="990.0">Lab.Commands.Command</node>
+    <node x="3156.196596239718" y="860.0">Lab.Communication.MessageFormer</node>
+    <node x="928.715720643808" y="990.0">Lab.Service.Database</node>
+    <node x="1691.6442920723796" y="240.0">Lab.Commands.Element</node>
+    <node x="1703.6442920723796" y="320.0">Lab.Commands.Meta</node>
+    <node x="3228.0180248111465" y="990.0">Lab.Communication.ReceivingAction</node>
+    <node x="1332.5694171125388" y="1510.0">Lab.Commands.PrintFieldDescendingNumberOfParticipants</node>
+    <node x="3335.546596239718" y="860.0">Lab.Communication.PackagePair</node>
+    <node x="446.06435006435026" y="1510.0">Lab.Commands.RemoveByID</node>
+    <node x="1849.067750676612" y="1760.0">Lab.Service.Work</node>
+    <node x="2508.693700486822" y="1510.0">Lab.Commands.Help</node>
+    <node x="1076.5694171125388" y="1510.0">Lab.Commands.Show</node>
+    <node x="2236.693700486822" y="1510.0">Lab.Commands.ExecuteScript</node>
+    <node x="2152.623873873874" y="320.0">Lab.Service.Answer</node>
+    <node x="2732.693700486822" y="1510.0">Lab.Commands.CountByNumberOfParticipants</node>
+    <node x="3033.0180248111465" y="1510.0">Lab.Communication.MessageSender</node>
+    <node x="3310.046596239718" y="1510.0">Lab.Communication.MessageReceiver</node>
+    <node x="2608.693700486822" y="1510.0">Lab.Commands.History</node>
+    <node x="2520.042162751024" y="1890.0">Lab.Service.Server</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Lab.Communication.Communicator" target="Lab.Communication.MessageReceiver">
+      <point x="21.600000000000023" y="-15.0" />
+      <point x="3261.7354059942672" y="1710.0" />
+      <point x="3338.046596239718" y="1710.0" />
+      <point x="-56.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.SumOfNumberOfParticipants" target="Lab.Objects.MusicBand">
+      <point x="35.42857142857156" y="-15.0" />
+      <point x="2101.072863500951" y="1470.0" />
+      <point x="2142.123873873874" y="1470.0" />
+      <point x="2142.123873873874" y="170.0" />
+      <point x="1036.475958969786" y="170.0" />
+      <point x="48.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.MusicBand" target="Lab.Objects.Album">
+      <point x="22.5" y="-15.0" />
+      <point x="1010.975958969786" y="60.0" />
+      <point x="1044.9010840099454" y="60.0" />
+      <point x="-33.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Help" target="Lab.Commands.Command">
+      <point x="-16.0" y="-15.0" />
+      <point x="2532.693700486822" y="1090.0" />
+      <point x="1929.1087223587224" y="1090.0" />
+      <point x="37.818181818181756" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.ExecuteScript" target="Lab.Service.Answer">
+      <point x="57.0" y="-15.0" />
+      <point x="2369.693700486822" y="1490.0" />
+      <point x="2384.2860360360355" y="1490.0" />
+      <point x="2384.2860360360355" y="600.0" />
+      <point x="2205.5469507969506" y="600.0" />
+      <point x="4.923076923076906" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.CountByNumberOfParticipants" target="Lab.Commands.Meta">
+      <point x="0.0" y="-15.0" />
+      <point x="2864.693700486822" y="1490.0" />
+      <point x="2880.8778828059703" y="1490.0" />
+      <point x="2880.8778828059703" y="500.0" />
+      <point x="1774.1204825485702" y="500.0" />
+      <point x="30.476190476190595" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Service.Answer">
+      <point x="-6.0" y="-15.0" />
+      <point x="910.6934772629146" y="1140.0" />
+      <point x="829.6426256364527" y="1140.0" />
+      <point x="829.6426256364527" y="730.0" />
+      <point x="2171.085412335412" y="730.0" />
+      <point x="-29.538461538461434" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Info" target="Lab.Service.Work">
+      <point x="20.0" y="15.0" />
+      <point x="1901.6442920723796" y="1570.0" />
+      <point x="1891.229912838774" y="1570.0" />
+      <point x="2.162162162162076" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.CountByNumberOfParticipants" target="Lab.Service.Answer">
+      <point x="37.71428571428578" y="-15.0" />
+      <point x="2902.4079862011076" y="1490.0" />
+      <point x="2916.2106207475695" y="1490.0" />
+      <point x="2916.2106207475695" y="490.0" />
+      <point x="2222.7777200277196" y="490.0" />
+      <point x="22.15384615384619" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Help" target="Lab.Service.Work">
+      <point x="20.0" y="15.0" />
+      <point x="2568.693700486822" y="1670.0" />
+      <point x="1912.8515344603957" y="1670.0" />
+      <point x="23.783783783783747" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Objects.MusicBand">
+      <point x="-31.5" y="-15.0" />
+      <point x="598.5643500643503" y="1170.0" />
+      <point x="585.0575123506342" y="1170.0" />
+      <point x="585.0575123506342" y="180.0" />
+      <point x="948.475958969786" y="180.0" />
+      <point x="-40.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.ExecuteScript" target="Lab.Commands.Meta">
+      <point x="19.0" y="-15.0" />
+      <point x="2331.693700486822" y="610.0" />
+      <point x="1758.8823873104748" y="610.0" />
+      <point x="15.238095238095184" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Commands.Meta">
+      <point x="-35.0" y="-15.0" />
+      <point x="707.0643500643503" y="1160.0" />
+      <point x="695.0575123506342" y="1160.0" />
+      <point x="695.0575123506342" y="600.0" />
+      <point x="1724.5966730247605" y="600.0" />
+      <point x="-19.047619047619037" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Command" target="Lab.Service.Answer">
+      <point x="26.0" y="-15.0" />
+      <point x="1917.2905405405406" y="970.0" />
+      <point x="1876.2905405405406" y="970.0" />
+      <point x="1876.2905405405406" y="820.0" />
+      <point x="2193.239258489258" y="820.0" />
+      <point x="-7.384615384615472" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Show">
+      <point x="-19.459459459459367" y="-15.0" />
+      <point x="1869.6082912171528" y="1650.0" />
+      <point x="1096.5694171125388" y="1650.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Meta" target="Lab.Commands.Element">
+      <point x="-20.0" y="-15.0" />
+      <point x="1723.6442920723796" y="295.0" />
+      <point x="1717.6442920723796" y="295.0" />
+      <point x="-26.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Show" target="Lab.Commands.Command">
+      <point x="22.85714285714289" y="-15.0" />
+      <point x="1139.4265599696816" y="1360.0" />
+      <point x="1866.0784193284194" y="1360.0" />
+      <point x="-25.212121212121247" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Database" target="Lab.Objects.Album">
+      <point x="48.0" y="-15.0" />
+      <point x="1032.715720643808" y="970.0" />
+      <point x="1083.1408456839672" y="970.0" />
+      <point x="1083.1408456839672" y="90.0" />
+      <point x="1110.9010840099454" y="90.0" />
+      <point x="33.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Server" target="Lab.Commands.Meta">
+      <point x="-37.71428571428578" y="-15.0" />
+      <point x="2530.3278770367383" y="1860.0" />
+      <point x="6.857142857143117" y="1860.0" />
+      <point x="6.857142857143117" y="1170.0" />
+      <point x="409.4642857142858" y="1170.0" />
+      <point x="409.4642857142858" y="550.0" />
+      <point x="1705.5490539771415" y="550.0" />
+      <point x="-38.095238095238074" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.SumOfNumberOfParticipants" target="Lab.Commands.Command">
+      <point x="-70.85714285714266" y="-15.0" />
+      <point x="1994.787149215237" y="1180.0" />
+      <point x="1900.7450859950861" y="1180.0" />
+      <point x="9.454545454545496" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveFirst" target="Lab.Commands.Meta">
+      <point x="-8.5" y="-15.0" />
+      <point x="1236.0694171125388" y="630.0" />
+      <point x="1736.0252444533319" y="630.0" />
+      <point x="-7.619047619047706" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveByID" target="Lab.Service.Answer">
+      <point x="-8.0" y="-15.0" />
+      <point x="502.06435006435026" y="1170.0" />
+      <point x="494.56435006435026" y="1170.0" />
+      <point x="494.56435006435026" y="670.0" />
+      <point x="2156.3161815661815" y="670.0" />
+      <point x="-44.30769230769238" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Meta">
+      <point x="-38.91891891891896" y="-15.0" />
+      <point x="1850.1488317576932" y="1740.0" />
+      <point x="435.56435006435026" y="1740.0" />
+      <point x="435.56435006435026" y="570.0" />
+      <point x="1713.1681015961892" y="570.0" />
+      <point x="-30.476190476190368" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Server" target="Lab.Service.Answer">
+      <point x="30.85714285714289" y="-15.0" />
+      <point x="2598.899305608167" y="1850.0" />
+      <point x="3637.410881954004" y="1850.0" />
+      <point x="3637.410881954004" y="390.0" />
+      <point x="2242.4700277200272" y="390.0" />
+      <point x="41.84615384615381" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Clear" target="Lab.Service.Database">
+      <point x="-37.71428571428578" y="-15.0" />
+      <point x="1726.855131398253" y="1230.0" />
+      <point x="1014.1894048543343" y="1230.0" />
+      <point x="29.473684210526244" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Element" target="Lab.Objects.MusicBand">
+      <point x="-26.0" y="-15.0" />
+      <point x="1717.6442920723796" y="190.0" />
+      <point x="1020.475958969786" y="190.0" />
+      <point x="32.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Command" target="Lab.Commands.Meta">
+      <point x="-26.0" y="-15.0" />
+      <point x="1865.2905405405406" y="640.0" />
+      <point x="1747.4538158819034" y="640.0" />
+      <point x="3.809523809523853" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.SumOfNumberOfParticipants" target="Lab.Service.Work">
+      <point x="62.0" y="15.0" />
+      <point x="2127.6442920723794" y="1590.0" />
+      <point x="1895.5542371630986" y="1590.0" />
+      <point x="6.486486486486456" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Add">
+      <point x="-32.432432432432506" y="-15.0" />
+      <point x="1856.6353182441794" y="1710.0" />
+      <point x="612.0643500643503" y="1710.0" />
+      <point x="-18.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Show" target="Lab.Service.Work">
+      <point x="20.0" y="15.0" />
+      <point x="1136.5694171125388" y="1640.0" />
+      <point x="1871.7704533793149" y="1640.0" />
+      <point x="-17.29729729729729" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.Info" target="Lab.Service.Database">
+      <point x="-33.33333333333326" y="-15.0" />
+      <point x="1848.3109587390463" y="1200.0" />
+      <point x="1025.9788785385447" y="1200.0" />
+      <point x="41.26315789473665" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveFirst" target="Lab.Service.Answer">
+      <point x="25.5" y="-15.0" />
+      <point x="1270.0694171125388" y="1270.0" />
+      <point x="1309.076254826255" y="1270.0" />
+      <point x="1309.076254826255" y="770.0" />
+      <point x="2180.9315661815663" y="770.0" />
+      <point x="-19.692307692307622" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveByID" target="Lab.Commands.Meta">
+      <point x="-40.0" y="-15.0" />
+      <point x="470.06435006435026" y="1170.0" />
+      <point x="461.31435006435026" y="1170.0" />
+      <point x="461.31435006435026" y="580.0" />
+      <point x="1716.9776254057128" y="580.0" />
+      <point x="-26.666666666666742" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.ExecuteScript">
+      <point x="12.972972972972912" y="-15.0" />
+      <point x="1902.0407236495848" y="1620.0" />
+      <point x="2274.693700486822" y="1620.0" />
+      <point x="-38.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Update">
+      <point x="-23.783783783783747" y="-15.0" />
+      <point x="1865.2839668928282" y="1670.0" />
+      <point x="892.6934772629146" y="1670.0" />
+      <point x="-24.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Service.Work">
+      <point x="18.0" y="15.0" />
+      <point x="648.0643500643503" y="1700.0" />
+      <point x="1858.797480406342" y="1700.0" />
+      <point x="-30.270270270270203" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.Show" target="Lab.Objects.MusicBand">
+      <point x="-22.85714285714289" y="-15.0" />
+      <point x="1094.1408456839672" y="220.0" />
+      <point x="996.475958969786" y="220.0" />
+      <point x="8.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Server" target="Lab.Communication.Communicator">
+      <point x="3.428571428571331" y="-15.0" />
+      <point x="2571.4707341795956" y="1810.0" />
+      <point x="3204.1354059942673" y="1810.0" />
+      <point x="-36.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Authorizator" target="Lab.Commands.Meta">
+      <point x="60.0" y="-15.0" />
+      <point x="244.95744800056968" y="1740.0" />
+      <point x="413.27380952380963" y="1740.0" />
+      <point x="413.27380952380963" y="560.0" />
+      <point x="1709.3585777866654" y="560.0" />
+      <point x="-34.28571428571422" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Service.Answer">
+      <point x="-13.5" y="-15.0" />
+      <point x="616.5643500643503" y="1150.0" />
+      <point x="603.0575123506342" y="1150.0" />
+      <point x="603.0575123506342" y="680.0" />
+      <point x="2158.7777200277196" y="680.0" />
+      <point x="-41.84615384615381" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.SumOfNumberOfParticipants" target="Lab.Commands.Meta">
+      <point x="0.0" y="-15.0" />
+      <point x="2065.6442920723794" y="1460.0" />
+      <point x="2131.123873873874" y="1460.0" />
+      <point x="2131.123873873874" y="620.0" />
+      <point x="1755.072863500951" y="620.0" />
+      <point x="11.428571428571331" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.History" target="Lab.Service.Work">
+      <point x="26.0" y="15.0" />
+      <point x="2686.693700486822" y="1690.0" />
+      <point x="1917.1758587847203" y="1690.0" />
+      <point x="28.108108108108127" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.RemoveByID">
+      <point x="-36.75675675675666" y="-15.0" />
+      <point x="1852.3109939198553" y="1730.0" />
+      <point x="478.06435006435026" y="1730.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Show" target="Lab.Service.Database">
+      <point x="-34.28571428571422" y="-15.0" />
+      <point x="1082.2837028268245" y="1270.0" />
+      <point x="990.6104574859135" y="1270.0" />
+      <point x="5.894736842105431" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageReceiver" target="Lab.Communication.Communicator">
+      <point x="56.0" y="15.0" />
+      <point x="3450.046596239718" y="1730.0" />
+      <point x="3290.5354059942674" y="1730.0" />
+      <point x="50.40000000000009" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Objects.MusicBand">
+      <point x="-49.0" y="-15.0" />
+      <point x="693.0643500643503" y="1170.0" />
+      <point x="684.0575123506342" y="1170.0" />
+      <point x="684.0575123506342" y="190.0" />
+      <point x="956.475958969786" y="190.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.History" target="Lab.Commands.Command">
+      <point x="-41.60000000000002" y="-15.0" />
+      <point x="2619.093700486822" y="1080.0" />
+      <point x="1932.2602375102376" y="1080.0" />
+      <point x="40.969696969697" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.CountByNumberOfParticipants">
+      <point x="30.270270270270203" y="-15.0" />
+      <point x="1919.3380209468824" y="1700.0" />
+      <point x="2798.693700486822" y="1700.0" />
+      <point x="-66.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Helper" target="Lab.Objects.MusicBand">
+      <point x="0.0" y="-15.0" />
+      <point x="337.4574480005697" y="160.0" />
+      <point x="932.475958969786" y="160.0" />
+      <point x="-56.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.SumOfNumberOfParticipants" target="Lab.Service.Answer">
+      <point x="106.28571428571422" y="-15.0" />
+      <point x="2171.930006358094" y="1490.0" />
+      <point x="2211.623873873874" y="1490.0" />
+      <point x="2211.623873873874" y="830.0" />
+      <point x="2203.085412335412" y="830.0" />
+      <point x="2.461538461538339" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.Communicator" target="Lab.Communication.MessageSender">
+      <point x="-50.400000000000034" y="-15.0" />
+      <point x="3189.7354059942672" y="1730.0" />
+      <point x="3071.0180248111465" y="1730.0" />
+      <point x="-38.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Authorizator.AuthorizatorHolder" target="Lab.Service.Authorizator">
+      <point x="0.0" y="15.0" />
+      <point x="120.21428571428578" y="1730.0" />
+      <point x="148.95744800056968" y="1730.0" />
+      <point x="-36.0" y="-15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageReceiver" target="Lab.Communication.PackagePair">
+      <point x="0.0" y="-15.0" />
+      <point x="3394.046596239718" y="1480.0" />
+      <point x="3428.696596239718" y="1480.0" />
+      <point x="3428.696596239718" y="970.0" />
+      <point x="3420.546596239718" y="970.0" />
+      <point x="17.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Commands.Meta">
+      <point x="-22.5" y="-15.0" />
+      <point x="607.5643500643503" y="1160.0" />
+      <point x="594.0575123506342" y="1160.0" />
+      <point x="594.0575123506342" y="590.0" />
+      <point x="1720.7871492152367" y="590.0" />
+      <point x="-22.85714285714289" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageReceiver" target="Lab.Communication.ExitException">
+      <point x="67.19999999999999" y="-15.0" />
+      <point x="3461.246596239718" y="1490.0" />
+      <point x="3488.196596239718" y="1490.0" />
+      <point x="-38.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Exit" target="Lab.Commands.Command">
+      <point x="-32.0" y="-15.0" />
+      <point x="2416.693700486822" y="1120.0" />
+      <point x="1919.654176904177" y="1120.0" />
+      <point x="28.36363636363626" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Server" target="Lab.Service.Database">
+      <point x="-17.14285714285711" y="-15.0" />
+      <point x="2550.899305608167" y="1830.0" />
+      <point x="424.27380952380963" y="1830.0" />
+      <point x="424.27380952380963" y="1190.0" />
+      <point x="937.557825906966" y="1190.0" />
+      <point x="-47.15789473684208" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Server" target="Lab.Service.Work">
+      <point x="-10.28571428571422" y="-15.0" />
+      <point x="2557.75644846531" y="1820.0" />
+      <point x="1869.067750676612" y="1820.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.AddIfMax">
+      <point x="-28.108108108108127" y="-15.0" />
+      <point x="1860.959642568504" y="1690.0" />
+      <point x="714.0643500643503" y="1690.0" />
+      <point x="-28.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Commands.Command">
+      <point x="22.5" y="-15.0" />
+      <point x="652.5643500643503" y="1300.0" />
+      <point x="1847.1693284193286" y="1300.0" />
+      <point x="-44.12121212121201" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.PrintFieldDescendingNumberOfParticipants" target="Lab.Service.Answer">
+      <point x="52.57142857142844" y="-15.0" />
+      <point x="1569.1408456839672" y="1270.0" />
+      <point x="1565.7616732555002" y="1270.0" />
+      <point x="1565.7616732555002" y="790.0" />
+      <point x="2185.854643104643" y="790.0" />
+      <point x="-14.769230769230717" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveByID" target="Lab.Objects.MusicBand">
+      <point x="-56.0" y="-15.0" />
+      <point x="454.06435006435026" y="1170.0" />
+      <point x="450.31435006435026" y="1170.0" />
+      <point x="450.31435006435026" y="170.0" />
+      <point x="940.475958969786" y="170.0" />
+      <point x="-48.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.PrintFieldDescendingNumberOfParticipants" target="Lab.Commands.Meta">
+      <point x="-52.57142857142867" y="-15.0" />
+      <point x="1463.9979885411103" y="640.0" />
+      <point x="1739.8347682628557" y="640.0" />
+      <point x="-3.809523809523853" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.CountByNumberOfParticipants" target="Lab.Objects.MusicBand">
+      <point x="113.14285714285734" y="-15.0" />
+      <point x="2977.836557629679" y="1480.0" />
+      <point x="2941.995263989091" y="1480.0" />
+      <point x="2941.995263989091" y="160.0" />
+      <point x="1044.475958969786" y="160.0" />
+      <point x="56.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Info">
+      <point x="0.0" y="-15.0" />
+      <point x="1889.067750676612" y="1560.0" />
+      <point x="1861.6442920723796" y="1560.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Commands.Meta">
+      <point x="-30.0" y="-15.0" />
+      <point x="886.6934772629146" y="1160.0" />
+      <point x="767.1426256364527" y="1160.0" />
+      <point x="767.1426256364527" y="610.0" />
+      <point x="1728.4061968342844" y="610.0" />
+      <point x="-15.238095238095184" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Exit" target="Lab.Service.Work">
+      <point x="20.0" y="15.0" />
+      <point x="2468.693700486822" y="1650.0" />
+      <point x="1908.5272101360715" y="1650.0" />
+      <point x="19.459459459459367" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.Database" target="Lab.Objects.MusicGenre">
+      <point x="-32.0" y="-15.0" />
+      <point x="952.715720643808" y="950.0" />
+      <point x="840.6426256364527" y="950.0" />
+      <point x="840.6426256364527" y="90.0" />
+      <point x="751.2344173432788" y="90.0" />
+      <point x="-42.666666666666515" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.ExecuteScript" target="Lab.Service.Work">
+      <point x="38.0" y="15.0" />
+      <point x="2350.693700486822" y="1630.0" />
+      <point x="1904.2028858117474" y="1630.0" />
+      <point x="15.135135135135215" y="-15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageReceiver" target="Lab.Communication.ReceivingAction">
+      <point x="-67.19999999999999" y="-15.0" />
+      <point x="3326.8465962397177" y="1490.0" />
+      <point x="3270.0180248111465" y="1490.0" />
+      <point x="-42.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Service.Work">
+      <point x="24.0" y="15.0" />
+      <point x="940.6934772629146" y="1660.0" />
+      <point x="1867.4461290549903" y="1660.0" />
+      <point x="-21.62162162162167" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.Add" target="Lab.Service.Database">
+      <point x="4.5" y="-15.0" />
+      <point x="634.5643500643503" y="1220.0" />
+      <point x="955.2420364332818" y="1220.0" />
+      <point x="-29.473684210526244" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Database" target="Lab.Objects.MusicBand">
+      <point x="32.0" y="-15.0" />
+      <point x="1016.715720643808" y="910.0" />
+      <point x="991.475958969786" y="910.0" />
+      <point x="991.475958969786" y="220.0" />
+      <point x="988.475958969786" y="220.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Server" target="Lab.Service.Authorizator">
+      <point x="-24.0" y="-15.0" />
+      <point x="2544.042162751024" y="1840.0" />
+      <point x="184.95744800056968" y="1840.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Commands.Command">
+      <point x="42.0" y="-15.0" />
+      <point x="958.6934772629146" y="1350.0" />
+      <point x="1862.9269041769044" y="1350.0" />
+      <point x="-28.36363636363626" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Clear">
+      <point x="-6.486486486486456" y="-15.0" />
+      <point x="1882.5812641901257" y="1590.0" />
+      <point x="1742.5694171125388" y="1590.0" />
+      <point x="-22.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Help" target="Lab.Service.Answer">
+      <point x="16.0" y="-15.0" />
+      <point x="2564.693700486822" y="1480.0" />
+      <point x="2599.193700486822" y="1480.0" />
+      <point x="2599.193700486822" y="550.0" />
+      <point x="2212.9315661815663" y="550.0" />
+      <point x="12.307692307692378" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.ExecuteScript" target="Lab.Commands.Command">
+      <point x="-19.0" y="-15.0" />
+      <point x="2293.693700486822" y="1130.0" />
+      <point x="1916.5026617526619" y="1130.0" />
+      <point x="25.212121212121247" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.SumOfNumberOfParticipants" target="Lab.Service.Database">
+      <point x="-106.28571428571422" y="-15.0" />
+      <point x="1959.3585777866654" y="1190.0" />
+      <point x="1031.87361538065" y="1190.0" />
+      <point x="47.15789473684208" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.Communicator" target="Lab.Service.Answer">
+      <point x="64.79999999999995" y="-15.0" />
+      <point x="3304.935405994267" y="1740.0" />
+      <point x="3612.696596239718" y="1740.0" />
+      <point x="3612.696596239718" y="410.0" />
+      <point x="2237.5469507969506" y="410.0" />
+      <point x="36.923076923076906" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Server" target="Lab.Service.Helper">
+      <point x="-44.57142857142867" y="-15.0" />
+      <point x="2523.4707341795956" y="1870.0" />
+      <point x="0.0" y="1870.0" />
+      <point x="0.0" y="970.0" />
+      <point x="305.4574480005697" y="970.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveFirst" target="Lab.Objects.MusicBand">
+      <point x="-25.5" y="-15.0" />
+      <point x="1219.0694171125388" y="1270.0" />
+      <point x="1212.1510840099454" y="1270.0" />
+      <point x="1212.1510840099454" y="210.0" />
+      <point x="1004.475958969786" y="210.0" />
+      <point x="16.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Server" target="Lab.Communication.ExitException">
+      <point x="17.14285714285711" y="-15.0" />
+      <point x="2585.185019893881" y="1830.0" />
+      <point x="3623.696596239718" y="1830.0" />
+      <point x="3623.696596239718" y="1490.0" />
+      <point x="3564.196596239718" y="1490.0" />
+      <point x="38.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.SumOfNumberOfParticipants">
+      <point x="4.32432432432438" y="-15.0" />
+      <point x="1893.3920750009365" y="1580.0" />
+      <point x="2003.6442920723796" y="1580.0" />
+      <point x="-62.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveByID" target="Lab.Commands.Command">
+      <point x="56.0" y="-15.0" />
+      <point x="566.0643500643503" y="1290.0" />
+      <point x="1844.0178132678134" y="1290.0" />
+      <point x="-47.27272727272725" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Info" target="Lab.Commands.Meta">
+      <point x="6.6666666666667425" y="-15.0" />
+      <point x="1888.3109587390463" y="1470.0" />
+      <point x="1953.7905405405406" y="1470.0" />
+      <point x="1953.7905405405406" y="630.0" />
+      <point x="1751.2633396914273" y="630.0" />
+      <point x="7.619047619047706" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Help" target="Lab.Commands.Meta">
+      <point x="0.0" y="-15.0" />
+      <point x="2548.693700486822" y="560.0" />
+      <point x="1766.5014349295225" y="560.0" />
+      <point x="22.85714285714289" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.PrintFieldDescendingNumberOfParticipants" target="Lab.Commands.Command">
+      <point x="157.71428571428578" y="-15.0" />
+      <point x="1674.2837028268245" y="1410.0" />
+      <point x="1881.8359950859951" y="1410.0" />
+      <point x="-9.454545454545496" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Authorizator" target="Lab.Service.FileTester">
+      <point x="12.0" y="-15.0" />
+      <point x="196.95744800056968" y="1720.0" />
+      <point x="300.2142857142858" y="1720.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.History">
+      <point x="25.94594594594605" y="-15.0" />
+      <point x="1915.0136966225582" y="1680.0" />
+      <point x="2634.693700486822" y="1680.0" />
+      <point x="-26.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.MusicBand" target="Lab.Objects.MusicGenre">
+      <point x="-52.5" y="-15.0" />
+      <point x="935.975958969786" y="80.0" />
+      <point x="793.9010840099453" y="80.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.Communicator" target="Lab.Commands.Meta">
+      <point x="-64.80000000000018" y="-15.0" />
+      <point x="3175.335405994267" y="1740.0" />
+      <point x="3022.5180248111465" y="1740.0" />
+      <point x="3022.5180248111465" y="440.0" />
+      <point x="1777.9300063580938" y="440.0" />
+      <point x="34.28571428571422" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Service.Database">
+      <point x="7.0" y="-15.0" />
+      <point x="749.0643500643503" y="1240.0" />
+      <point x="967.0315101174922" y="1240.0" />
+      <point x="-17.684210526315837" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveFirst" target="Lab.Commands.Command">
+      <point x="42.5" y="-15.0" />
+      <point x="1287.0694171125388" y="1380.0" />
+      <point x="1872.3814496314496" y="1380.0" />
+      <point x="-18.90909090909099" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.PrintFieldDescendingNumberOfParticipants">
+      <point x="-10.810810810810835" y="-15.0" />
+      <point x="1878.256939865801" y="1610.0" />
+      <point x="1424.5694171125388" y="1610.0" />
+      <point x="-92.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.ReceivingAction" target="Lab.Communication.MessageFormer">
+      <point x="-67.19999999999999" y="-15.0" />
+      <point x="3244.8180248111466" y="970.0" />
+      <point x="3253.910881954004" y="970.0" />
+      <point x="21.714285714285666" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Clear" target="Lab.Service.Work">
+      <point x="22.0" y="15.0" />
+      <point x="1786.5694171125388" y="1580.0" />
+      <point x="1884.7434263522878" y="1580.0" />
+      <point x="-4.32432432432438" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.Database" target="Lab.Service.Helper">
+      <point x="-48.0" y="-15.0" />
+      <point x="936.715720643808" y="960.0" />
+      <point x="369.4574480005697" y="960.0" />
+      <point x="32.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Exit" target="Lab.Service.Answer">
+      <point x="32.0" y="-15.0" />
+      <point x="2480.693700486822" y="1490.0" />
+      <point x="2504.193700486822" y="1490.0" />
+      <point x="2504.193700486822" y="570.0" />
+      <point x="2210.4700277200272" y="570.0" />
+      <point x="9.846153846153811" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.PrintFieldDescendingNumberOfParticipants" target="Lab.Service.Work">
+      <point x="92.0" y="15.0" />
+      <point x="1608.5694171125388" y="1600.0" />
+      <point x="1880.4191020279636" y="1600.0" />
+      <point x="-8.648648648648532" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.Database" target="Lab.Objects.Coordinates">
+      <point x="-16.0" y="-15.0" />
+      <point x="968.715720643808" y="940.0" />
+      <point x="917.975958969786" y="940.0" />
+      <point x="917.975958969786" y="90.0" />
+      <point x="894.9010840099453" y="90.0" />
+      <point x="-51.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Objects.MusicBand">
+      <point x="-42.0" y="-15.0" />
+      <point x="874.6934772629146" y="1170.0" />
+      <point x="756.1426256364527" y="1170.0" />
+      <point x="756.1426256364527" y="200.0" />
+      <point x="964.475958969786" y="200.0" />
+      <point x="-24.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Exit" target="Lab.Commands.Meta">
+      <point x="0.0" y="-15.0" />
+      <point x="2448.693700486822" y="590.0" />
+      <point x="1762.6919111199986" y="590.0" />
+      <point x="19.047619047619037" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.History" target="Lab.Service.Answer">
+      <point x="41.60000000000002" y="-15.0" />
+      <point x="2702.2937004868218" y="1490.0" />
+      <point x="2724.2860360360355" y="1490.0" />
+      <point x="2724.2860360360355" y="510.0" />
+      <point x="2220.3161815661815" y="510.0" />
+      <point x="19.692307692307622" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.Communicator" target="Lab.Communication.MessageFormer">
+      <point x="-7.2000000000000455" y="-15.0" />
+      <point x="3232.935405994267" y="1700.0" />
+      <point x="3206.5180248111465" y="1700.0" />
+      <point x="3206.5180248111465" y="970.0" />
+      <point x="3210.4823105254322" y="970.0" />
+      <point x="-21.71428571428578" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageFormer" target="Lab.Service.Answer">
+      <point x="38.0" y="-15.0" />
+      <point x="3270.196596239718" y="420.0" />
+      <point x="2235.085412335412" y="420.0" />
+      <point x="34.46153846153857" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.RemoveFirst">
+      <point x="-15.135135135135215" y="-15.0" />
+      <point x="1873.932615541477" y="1630.0" />
+      <point x="1210.5694171125388" y="1630.0" />
+      <point x="-34.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Update" target="Lab.Service.Database">
+      <point x="6.0" y="-15.0" />
+      <point x="922.6934772629146" y="1260.0" />
+      <point x="978.8209838017026" y="1260.0" />
+      <point x="-5.894736842105431" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.PrintFieldDescendingNumberOfParticipants" target="Lab.Service.Database">
+      <point x="-157.71428571428578" y="-15.0" />
+      <point x="1358.855131398253" y="1240.0" />
+      <point x="1008.2946680122293" y="1240.0" />
+      <point x="23.578947368421268" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.PrintFieldDescendingNumberOfParticipants" target="Lab.Objects.MusicBand">
+      <point x="-105.14285714285711" y="-15.0" />
+      <point x="1411.4265599696816" y="1270.0" />
+      <point x="1452.9979885411103" y="1270.0" />
+      <point x="1452.9979885411103" y="200.0" />
+      <point x="1012.475958969786" y="200.0" />
+      <point x="24.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Objects.MusicBand" target="Lab.Objects.Coordinates">
+      <point x="-22.5" y="-15.0" />
+      <point x="965.975958969786" y="60.0" />
+      <point x="928.9010840099453" y="60.0" />
+      <point x="-17.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.History" target="Lab.Commands.Meta">
+      <point x="0.0" y="-15.0" />
+      <point x="2660.693700486822" y="530.0" />
+      <point x="1770.3109587390463" y="530.0" />
+      <point x="26.666666666666742" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageSender" target="Lab.Communication.MessageFormer">
+      <point x="0.0" y="-15.0" />
+      <point x="3109.0180248111465" y="970.0" />
+      <point x="3167.053739096861" y="970.0" />
+      <point x="-65.14285714285711" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.MessageFormer" target="Lab.Commands.Meta">
+      <point x="-38.0" y="-15.0" />
+      <point x="3194.196596239718" y="430.0" />
+      <point x="1781.7395301676177" y="430.0" />
+      <point x="38.095238095238074" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Exit">
+      <point x="17.29729729729729" y="-15.0" />
+      <point x="1906.3650479739094" y="1640.0" />
+      <point x="2428.693700486822" y="1640.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Authorizator" target="Lab.Service.Helper">
+      <point x="36.0" y="-15.0" />
+      <point x="220.95744800056968" y="1730.0" />
+      <point x="374.7142857142858" y="1730.0" />
+      <point x="374.7142857142858" y="970.0" />
+      <point x="337.4574480005697" y="970.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.CountByNumberOfParticipants" target="Lab.Service.Database">
+      <point x="-113.14285714285734" y="-15.0" />
+      <point x="2751.5508433439645" y="1060.0" />
+      <point x="1037.7683522227555" y="1060.0" />
+      <point x="53.05263157894751" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Clear" target="Lab.Commands.Command">
+      <point x="25.14285714285711" y="-15.0" />
+      <point x="1789.712274255396" y="1420.0" />
+      <point x="1884.9875102375104" y="1420.0" />
+      <point x="-6.303030303030255" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Service.Work">
+      <point x="28.0" y="15.0" />
+      <point x="770.0643500643503" y="1680.0" />
+      <point x="1863.121804730666" y="1680.0" />
+      <point x="-25.945945945945823" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Service.Answer">
+      <point x="36.75675675675666" y="-15.0" />
+      <point x="1925.8245074333686" y="1730.0" />
+      <point x="3009.355862648984" y="1730.0" />
+      <point x="3009.355862648984" y="460.0" />
+      <point x="2230.162335412335" y="460.0" />
+      <point x="29.538461538461434" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveFirst" target="Lab.Service.Work">
+      <point x="34.0" y="15.0" />
+      <point x="1278.5694171125388" y="1620.0" />
+      <point x="1876.094777703639" y="1620.0" />
+      <point x="-12.972972972972912" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveByID" target="Lab.Service.Database">
+      <point x="8.0" y="-15.0" />
+      <point x="518.0643500643503" y="1200.0" />
+      <point x="943.4525627490714" y="1200.0" />
+      <point x="-41.26315789473665" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Authorizator" target="Lab.Service.Authorizator.AuthorizatorHolder">
+      <point x="-60.0" y="-15.0" />
+      <point x="124.95744800056968" y="1740.0" />
+      <point x="56.21428571428578" y="1740.0" />
+      <point x="-64.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Clear" target="Lab.Service.Answer">
+      <point x="0.0" y="-15.0" />
+      <point x="1763.7837028268245" y="800.0" />
+      <point x="2188.3161815661815" y="800.0" />
+      <point x="-12.307692307692378" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Commands.Command">
+      <point x="35.0" y="-15.0" />
+      <point x="777.0643500643503" y="1320.0" />
+      <point x="1853.4723587223589" y="1320.0" />
+      <point x="-37.818181818181756" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.AddIfMax" target="Lab.Service.Answer">
+      <point x="-7.0" y="-15.0" />
+      <point x="735.0643500643503" y="1170.0" />
+      <point x="730.5643500643503" y="1170.0" />
+      <point x="730.5643500643503" y="710.0" />
+      <point x="2166.162335412335" y="710.0" />
+      <point x="-34.46153846153857" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Info" target="Lab.Service.Answer">
+      <point x="33.33333333333326" y="-15.0" />
+      <point x="1914.9776254057128" y="1490.0" />
+      <point x="1975.7905405405406" y="1490.0" />
+      <point x="1975.7905405405406" y="840.0" />
+      <point x="2198.162335412335" y="840.0" />
+      <point x="-2.4615384615385665" y="15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Help">
+      <point x="21.62162162162167" y="-15.0" />
+      <point x="1910.6893722982336" y="1660.0" />
+      <point x="2528.693700486822" y="1660.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Info" target="Lab.Commands.Command">
+      <point x="-6.6666666666667425" y="-15.0" />
+      <point x="1874.9776254057128" y="1460.0" />
+      <point x="1897.593570843571" y="1460.0" />
+      <point x="6.303030303030255" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Command" target="Lab.Service.Work">
+      <point x="15.75757575757575" y="15.0" />
+      <point x="1907.0481162981164" y="1160.0" />
+      <point x="2200.1442920723794" y="1160.0" />
+      <point x="2200.1442920723794" y="1600.0" />
+      <point x="1897.7163993252607" y="1600.0" />
+      <point x="8.64864864864876" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.Show" target="Lab.Service.Answer">
+      <point x="11.428571428571331" y="-15.0" />
+      <point x="1127.99798854111" y="1270.0" />
+      <point x="1173.3908456839672" y="1270.0" />
+      <point x="1173.3908456839672" y="750.0" />
+      <point x="2176.008489258489" y="750.0" />
+      <point x="-24.615384615384528" y="15.0" />
+    </edge>
+    <edge source="Lab.Main" target="Lab.Service.Server">
+      <point x="-20.0" y="-15.0" />
+      <point x="2548.042162751024" y="1945.0" />
+      <point x="2544.042162751024" y="1945.0" />
+      <point x="-24.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Show" target="Lab.Commands.Meta">
+      <point x="-11.428571428571331" y="-15.0" />
+      <point x="1105.1408456839672" y="620.0" />
+      <point x="1732.2157206438083" y="620.0" />
+      <point x="-11.428571428571331" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.CountByNumberOfParticipants" target="Lab.Service.Work">
+      <point x="66.0" y="15.0" />
+      <point x="2930.693700486822" y="1710.0" />
+      <point x="1921.5001831090444" y="1710.0" />
+      <point x="32.432432432432506" y="-15.0" />
+    </edge>
+    <edge source="Lab.Commands.CountByNumberOfParticipants" target="Lab.Commands.Command">
+      <point x="-37.71428571428578" y="-15.0" />
+      <point x="2826.979414772536" y="1040.0" />
+      <point x="1941.7147829647831" y="1040.0" />
+      <point x="50.42424242424249" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.Clear" target="Lab.Commands.Meta">
+      <point x="-12.571428571428669" y="-15.0" />
+      <point x="1751.9979885411103" y="1210.0" />
+      <point x="1717.7548355417844" y="1210.0" />
+      <point x="1717.7548355417844" y="650.0" />
+      <point x="1743.6442920723796" y="650.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveFirst" target="Lab.Service.Database">
+      <point x="-59.5" y="-15.0" />
+      <point x="1185.0694171125388" y="1260.0" />
+      <point x="996.5051943280184" y="1260.0" />
+      <point x="11.789473684210407" y="15.0" />
+    </edge>
+    <edge source="Lab.Commands.RemoveByID" target="Lab.Service.Work">
+      <point x="32.0" y="15.0" />
+      <point x="542.0643500643503" y="1720.0" />
+      <point x="1854.4731560820173" y="1720.0" />
+      <point x="-34.59459459459458" y="-15.0" />
+    </edge>
+    <edge source="Lab.Service.Work" target="Lab.Commands.Command">
+      <point x="-2.162162162162076" y="-15.0" />
+      <point x="1886.9055885144498" y="1570.0" />
+      <point x="1828.1442920723796" y="1570.0" />
+      <point x="1828.1442920723796" y="1440.0" />
+      <point x="1891.2905405405406" y="1440.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Lab.Communication.ReceivingAction" target="Lab.Communication.PackagePair">
+      <point x="33.60000000000002" y="-15.0" />
+      <point x="3345.6180248111464" y="970.0" />
+      <point x="3352.546596239718" y="970.0" />
+      <point x="-51.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="1069.9999999999995" y="1305.9999999999998" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
